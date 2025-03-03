@@ -1,15 +1,4 @@
-/* .bg-color{
-    background-color: #ecf0f3 !important;
-}
-body
-:root{
-    --bg-color-w:linear-gradient(145deg, #e2e8ec, #ffffff);
-    --box-color-w: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff !important;
-    --box-shadow-w: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
-    --font-fam: sans-serif;
-    --font-sz:60px;
-    --font-cl:#3c3e41       inset 2px 5px 10px rgb(5, 5, 5);
-} */
+
 /* ///////////////////////// end  style */
 :root {
   --nav-text: #c4cfde !important;

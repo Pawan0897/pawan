@@ -4,7 +4,7 @@ import Calender from "./Calender/Calender";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Stripe from "./PayGateway/Stripe";
 import Contactus from "./Contactus";
-import "../Style/style.css";
+import "../Style/Style.css";
 
 import "../JS/cursor.js";
 import Form from "./Form.jsx";
