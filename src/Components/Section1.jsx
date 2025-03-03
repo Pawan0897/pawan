@@ -1,6 +1,6 @@
 import user from "../Images/port4.png";
 import "../Style/cd-wordwrapper.css";
-import "../Js/cdjs-wordwrapper.js";
+import "../JS/cdjs-wordwrapper.js";;
 import "../Style/Icon.css";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
