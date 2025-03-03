@@ -8,6 +8,28 @@ import {
 } from '@stripe/react-stripe-js';
 
 const StripeForm = () => {
+  // //////////////////////////////////  cursor
+const cursorDot = document.querySelector("[data-cursor-dot]");
+const cursorOutline = document.querySelector("[data-cursor-outline]");
+window.addEventListener("mousemove", function (e) {
+  const posX = e.clientX;
+  const posY = e.clientY;
+
+  cursorDot.style.left = `${posX}px`;
+  cursorDot.style.top = `${posY}px`;
+
+  // cursorOutline.style.left = `${posX}px`;
+  // cursorOutline.style.top = `${posY}px`;
+
+  cursorOutline.animate(
+    {
+      left: `${posX}px`,
+      top: `${posY}px`,
+    },
+    { duration: 500, fill: "forwards" }
+  );
+});
+
   const stripe = useStripe();
   const elements = useElements();
 
@@ -57,9 +79,9 @@ const StripeForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <PaymentElement />
-      <button type="submit" className='mt-3 bg-danger text-light' disabled={!stripe || !elements}>
+    <form onSubmit={handleSubmit} >
+      <PaymentElement  />
+      <button type="submit" className='mt-3 bg-danger btn text-light' disabled={!stripe || !elements}>
         Pay
       </button>
       {/* Show error message to your customers */}

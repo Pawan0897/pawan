@@ -4,11 +4,13 @@ import Calender from "./Calender/Calender";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Stripe from "./PayGateway/Stripe";
 import Contactus from "./Contactus";
-// import "../Style/style.css"
+import "../Style/style.css"
 
 import "../JS/cursor.js"
+import Form from "./Form.jsx";
+import Calculater from "./Calculater.jsx";
 
-const queryclient = new QueryClient;
+const queryclient = new QueryClient();
 
 export default function Layout() {
   return (
@@ -20,13 +22,10 @@ export default function Layout() {
         <Route path="/calender" element={<Calender />} />
         <Route path="/stripe" element={<Stripe />} />
         <Route path="/contactus" element={<Contactus />} />
-        {/* ///////////////// admin panel pages */}
-        {/* <Route path="/admin" element={<Admin />} />
-        <Route path="/addname" element={<AddName />} />
-        <Route path="/addskill" element={<AddSkills />} />
-        <Route  path="/addcontactinfo" element={<AddContactInfo/>} />
-        <Route path="/addwhatdo" element={<AddWhatDo />} />
-        <Route path="/addportfolio" element={<AddPortfolio />} /> */}
+        <Route path="/form" element={<Form />} />
+        <Route path="/calculater" element={<Calculater />} />
+
+  
         
       </Routes>
     </QueryClientProvider>

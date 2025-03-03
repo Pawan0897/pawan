@@ -18,29 +18,26 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import DoneIcon from "@mui/icons-material/Done";
 import CloseIcon from "@mui/icons-material/Close";
 import Loader from "../Loader/Loader";
-import "../../JS/cursor.js"
+import "../../JS/cursor.js";
 export default function Calender() {
   // ///////////// cursor
   const cursorDot = document.querySelector("[data-cursor-dot]");
-const cursorOutline = document.querySelector("[data-cursor-outline]");
-window.addEventListener("mousemove",function(e){
-  const posX = e.clientX;
-  const posY = e.clientY;
+  const cursorOutline = document.querySelector("[data-cursor-outline]");
+  window.addEventListener("mousemove", function (e) {
+    const posX = e.clientX;
+    const posY = e.clientY;
 
-  cursorDot.style.left = `${posX}px`;
-  cursorDot.style.top = `${posY}px`;
-
-  // cursorOutline.style.left = `${posX}px`;
-  // cursorOutline.style.top = `${posY}px`;
-
-  cursorOutline.animate({
-    left:`${posX}px`,
-    top:`${posY}px`
-    
-  },{duration:500,fill:"forwards"});
-
-})
-// ///////////////// cursor
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+    cursorOutline.animate(
+      {
+        left: `${posX}px`,
+        top: `${posY}px`,
+      },
+      { duration: 500, fill: "forwards" }
+    );
+  });
+  // ///////////////// cursor
   // const events = [
   //   { title: "Meeting", start: new Date() },
   //   //   { title: "demo", start: new Date(), end: addDays(new Date(), 3) },
@@ -58,7 +55,7 @@ window.addEventListener("mousemove",function(e){
   const [eventopen, setevent] = useState(true);
 
   // ////////////////////////////////////////////////////////////
-  const { data, refetch,isFetching } = useQuery({
+  const { data, refetch, isFetching } = useQuery({
     queryKey: ["der"],
     queryFn: () =>
       axios.get(
@@ -90,9 +87,9 @@ window.addEventListener("mousemove",function(e){
   // /////////////////////// event addd
   const eventsubmit = useMutation({
     /**
-     * 
-     * @param {*} values 
-     * @returns 
+     *
+     * @param {*} values
+     * @returns
      */
     mutationFn: (values) =>
       axios.post(
@@ -128,7 +125,7 @@ window.addEventListener("mousemove",function(e){
     },
   });
   // ///////////////////// delete event
-/******************* data *************************/
+  /******************* data *************************/
   const deleve = useMutation({
     mutationFn: (id) => {
       Swal.fire({
@@ -160,17 +157,20 @@ window.addEventListener("mousemove",function(e){
     onSuccess: () => refetch(),
   });
 
-/******************* data *************************/
+  /******************* data *************************/
 
   const showevent = (id) => {
-    axios.get(`https://66e408c7d2405277ed12c7ba.mockapi.io/all/users/all-users/${id?.event?.id}`)
+    axios
+      .get(
+        `https://66e408c7d2405277ed12c7ba.mockapi.io/all/users/all-users/${id?.event?.id}`
+      )
       .then((response) => {
         formik?.setValues({
           name: response?.data?.name,
           title: response?.data?.title,
           startdate: response?.data?.startdate,
           enddate: response?.data?.enddate,
-          descript:response?.data?.descript
+          descript: response?.data?.descript,
         });
       });
     seteventdetail(true);
@@ -190,16 +190,15 @@ window.addEventListener("mousemove",function(e){
       });
   };
 
-
   return (
     <>
       <Header />
 
       <div className="cursor-dot" data-cursor-dot></div>
- <div className="curson-outline" data-cursor-outline></div>
-      <div className="container mt-5 p-5">
-        <div className="row">
-          <div className="col-md-4">
+      <div className="curson-outline" data-cursor-outline></div>
+      <div className="container mt-5 p-5 p0">
+        <div className="row d-flex flex-wrap">
+          <div className="col-md-12  col-lg-4 order-md-2 order-xs-2 order-sm-2 order-2">
             <div className="calender-sidebar">
               <div className="add-button pt-3 ps-2 ">
                 <div className="float-end">
@@ -265,18 +264,25 @@ window.addEventListener("mousemove",function(e){
                           <p className="">
                             <strong>Start Event </strong>
                           </p>
-                          <p>{moment(formik?.values?.startdate).format("YYYY-MM-DD")}</p>
+                          <p>
+                            {moment(formik?.values?.startdate).format(
+                              "YYYY-MM-DD"
+                            )}
+                          </p>
                           {/* //////////////  end date*/}
                           <p className="">
                             <strong>End Event </strong>
                           </p>
-                          <p>{moment(formik?.values?.enddate).format("YYYY-MM-DD")}</p>
+                          <p>
+                            {moment(formik?.values?.enddate).format(
+                              "YYYY-MM-DD"
+                            )}
+                          </p>
                           {/* \////////////////////////  details */}
                           <p className="">
                             <strong>Event Details </strong>
                           </p>
                           <p>{formik?.values?.descript}</p>
-
                         </div>
                       </div>
                     )}
@@ -288,8 +294,8 @@ window.addEventListener("mousemove",function(e){
             </div>
           </div>
           {/* ////////////////////////////////////////////////////// */}
-          <div className="col-md-8">
-            <div className="calender p-5">
+          <div className="col-md-12 col-lg-8 order-md-1 order-sm-1 order-xs-1 order-1">
+            <div className="calender p-5 p1 ">
               {/* ////////////////////////// calender */}
               <FullCalendar
                 plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
@@ -301,7 +307,7 @@ window.addEventListener("mousemove",function(e){
                     start: item?.startdate,
                     id: item?.id,
                     end: moment(item?.enddate).endOf("days").format(),
-                // color:item?.startdate == "2024-10-31" ? "black" : item?.color,
+                    // color:item?.startdate == "2024-10-31" ? "black" : item?.color,
                     color: item?.color,
                   };
                 })}
@@ -309,13 +315,11 @@ window.addEventListener("mousemove",function(e){
                   showevent(event), setevent(false);
                 }}
                 // /////////////////////////////////
-                headerToolbar={
-                  {
+                headerToolbar={{
                   left: "prev,next today",
                   center: "title",
                   right: "dayGridMonth,timeGridWeek,timeGridDay",
-                }
-              }
+                }}
                 // /////////////////////////////////
                 editable={true}
                 eventTextColor="#c4cfde"
@@ -331,10 +335,10 @@ window.addEventListener("mousemove",function(e){
         </div>
       </div>
       {/* //////////////////////////////// Add Event Modal ///////////////////////// */}
-      <Modal show={show} centered size="lg" onHide={handleClose}>
+      <Modal show={show} centered size="lg"  onHide={handleClose}>
         <form>
           <Modal.Header closeButton>
-            <Modal.Title>Add Event</Modal.Title>
+            <Modal.Title className="text-color">Add Event</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div className="container">
@@ -496,8 +500,7 @@ window.addEventListener("mousemove",function(e){
           </Button>
         </Modal.Footer>
       </Modal>
-      {isFetching &&
-       <Loader/>}
+      {isFetching && <Loader />}
     </>
   );
 }

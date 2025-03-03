@@ -1,4 +1,4 @@
-import user from "./Images/user.jpg";
+import user from "../Images/port4.png";
 import "../Style/cd-wordwrapper.css";
 import "../Js/cdjs-wordwrapper.js";
 import "../Style/Icon.css";
@@ -6,43 +6,25 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { Link } from "react-router-dom";
-// /////////////////////////////////////////////////
+// ***********************************
 
 export default function Section1() {
-  // ////////////////////////////////////////
-  const cursorDot = document.querySelector("[data-cursor-dot]");
-  const cursorOutline = document.querySelector("[data-cursor-outline]");
-  window.addEventListener("mousemove", function (e) {
-    const posX = e.clientX;
-    const posY = e.clientY;
-
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
-    cursorOutline.animate(
-      {
-        left: `${posX}px`,
-        top: `${posY}px`,
-      },
-      { duration: 500, fill: "forwards" }
-    );
-  });
-
+  
   return (
     <>
-      {/*///////////// start  */}
+      {/* ******************************* */}
 
-      {/* //////////////////// end  */}
       <div className="container-fluid p-2">
-        <div className="row ">
-          <div className="col-md-4">
+        <div className="row justify-content-center align-items-center ">
+          <div className="col-md-12 col-lg-4">
             <div
-              className="user-image p-3 animate__animated animate__rotateInDownLeft "
+              className="user-image  animate__animated animate__rotateInDownLeft "
               id="pk"
             >
               <img src={user} width={"100%"} alt="" />
             </div>
           </div>
-          <div className="col-md-8 ps-5 animate__animated  animate__rotateInDownRight">
+          <div className="col-md-12 col-lg-8 ps-5 pt animate__animated  animate__rotateInDownRight">
             <div className="user-detail p-3 me-3 ">
               <div className="title">
                 <span>
@@ -55,22 +37,13 @@ export default function Section1() {
                     <b className="is-visible">
                       {" "}
                       a&nbsp;
-                      <span className="gold-title">Full-Stack Developer.</span>
+                      <span className="gold-title">Frontend Developer.</span>
                     </b>
 
                     <b>
                       {" "}
-                      a&nbsp;<span className="gold-title">UI Designer.</span>
-                    </b>
-                    <b>
                       a&nbsp;
-                      <span className="gold-title">Prototype Developer.</span>
-                    </b>
-                    <b>
-                      an&nbsp;<span className="gold-title">Artist.</span>
-                    </b>
-                    <b>
-                      a&nbsp;<span className="gold-title">Humanitarian.</span>
+                      <span className="gold-title">FullStack Developer.</span>
                     </b>
                   </span>
                 </div>
