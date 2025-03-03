@@ -1,5 +1,4 @@
 function Section2() {
-  
   return (
     <>
       <div className="container  ">
@@ -20,7 +19,7 @@ function Section2() {
               </h2>
 
               <div className="col-md-12 mb-3 col-lg-4 ">
-                <div className="what-do">
+                <div className="what-do ">
                   <div className="do-sec  p-4">
                     <h3 className="font-styleXX ">Todo List </h3>
                     <p className="">
@@ -76,9 +75,7 @@ function Section2() {
                     {/* <div className="bg"></div>
                   <div className="blob"></div> */}
                     <i></i>
-                    <h3 className="font-styleXX ">
-                      Dynamic Portfolio{" "}
-                    </h3>
+                    <h3 className="font-styleXX ">Dynamic Portfolio </h3>
                     <p>
                       I developed a dynamic portfolio that pulls project data
                       using Mock APIs, making the portfolio more scalable and
@@ -101,10 +98,7 @@ function Section2() {
                 <div className="what-do mdt-2">
                   <div className="do-sec p-4">
                     <i></i>
-                    <h3 className="font-styleXX ">
-                      {" "}
-                      E-Commerce Site
-                    </h3>
+                    <h3 className="font-styleXX "> E-Commerce Site</h3>
                     <p>
                       E-commerce applications have transformed the digital
                       marketplace, and I wanted to challenge myself by building

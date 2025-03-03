@@ -18,13 +18,13 @@ export default function Section1() {
         <div className="row justify-content-center align-items-center ">
           <div className="col-md-12 col-lg-4">
             <div
-              className="user-image  animate__animated animate__rotateInDownLeft "
+              className="user-image  animate__animated animate__bounceInLeft  "
               id="pk"
             >
               <img src={user} width={"100%"} alt="" />
             </div>
           </div>
-          <div className="col-md-12 col-lg-8 ps-5 pt animate__animated  animate__rotateInDownRight">
+          <div className="col-md-12 col-lg-8 ps-5 pt animate__animated  animate__bounceInRight">
             <div className="user-detail p-3 me-3 ">
               <div className="title">
                 <span>
