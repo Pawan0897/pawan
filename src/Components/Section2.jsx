@@ -4,10 +4,7 @@ function Section2() {
       <div className="container  ">
         <div
           className="section2"
-          data-aos="fade-zoom-in"
-          data-aos-offset="200"
-          data-aos-easing="ease-in-sine"
-          data-aos-duration="600"
+         
         >
           {/* ////////////////////////////////// */}
 

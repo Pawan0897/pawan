@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
 import { BrowserRouter } from "react-router-dom";
 import Layout from "./Components/Layout.jsx";
-import "../src/Style/cd-wordwrapper.css";
+import "./Style/cd-wordwrapper.css";
 import { Provider } from "react-redux";
 import { store } from "./Components/Store/Store.jsx";
 createRoot(document.getElementById("root")).render(
