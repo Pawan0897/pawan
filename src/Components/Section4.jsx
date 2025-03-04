@@ -11,7 +11,7 @@ export default function Section4() {
       <div className="container">
         <div className="row">
           <div className="col-md-12 p-5 p0">
-            <p className="bgcolortext ps-3">What Inspiring Me</p>
+            <p className="bgcolortext ps-3">What Inspire Me</p>
             <h2 className="font-styleX ps-2">
               {" "}
               Qu<strong className="bgcolortext">o</strong>t

@@ -52,7 +52,8 @@ useEffect(() => {
   return (
     <>
       <Header />
-     
+      <div className="cursor-dot" data-cursor-dot></div>
+      <div className="curson-outline" data-cursor-outline></div>
       <div className="calculater-block mt-5 container">
         <div className="row">
           <h1 className="text-center">Calculate Now!</h1>

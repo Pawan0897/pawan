@@ -2,19 +2,20 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
+import logo from "../Components/Images/layer5.png"
 const Header = () => {
   return (
     <>
       {/* ************************************************************************************ */}
-      <Navbar expand="lg" className="navbar-expand-lg py-3 px-3 bg-bodyNav">
+      <Navbar expand="lg" className="navbar-expand-lg   bg-bodyNav">
         <Container>
           <Navbar.Brand href="#home">
             {" "}
             <Link className="navbar-brand" to="/">
-              M<strong className="bgcolortext">y </strong>Ju
-              <strong className="bgcolortext">rn</strong>er
-              <strong className="bgcolortext">y</strong>
+              {/* M<strong className="bgcolortext">y </strong>Jo
+              <strong className="bgcolortext">ur</strong>ne
+              <strong className="bgcolortext">y</strong> */}
+              <img src={logo}  width={90}/>
             </Link>
           </Navbar.Brand>
           {/* *********************** */}
@@ -68,7 +69,7 @@ const Header = () => {
                       : ""
                   }`}
                 >
-                  Caculater
+                  Calculator
                 </Link>
               </Nav.Link>
               {/* ****************************** */}
@@ -100,7 +101,7 @@ const Header = () => {
                       : ""
                   }`}
                 >
-                  Contacts
+                  Contact
                 </Link>
               </Nav.Link>
               {/* ****************************** */}

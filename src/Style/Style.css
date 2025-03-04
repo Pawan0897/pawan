@@ -24,7 +24,7 @@
   --bg-color-white: #c4cfde !important;
 }
 body {
-  /* cursor: none; */
+  cursor: none;
   background-color: #191919 !important;
 }
 /* //////////////////// */
@@ -113,7 +113,25 @@ li {
   border-radius: 50%;
   z-index: 1;
   pointer-events: none;
+  z-index: 111;
   transform: translate(-50%, -50%);
+}
+.cursor-dot, .curson-outline {
+  position: fixed;
+  top: 0;
+  z-index: 111;
+  left: 0;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.curson-outline {
+  width: 30px;
+  z-index: 1;
+  height: 30px;
+  border: 3px solid var(--bg-red) !important;
 }
 /* ////////end */
 
@@ -1301,9 +1319,11 @@ li {
 
 /* ////////////////////////////   contact page styling...................... */
 .contact-sec {
-  background-image: url("../Images/contactslider.jpg");
-  height: 250px;
+  background-image: url("../Images/code.jpg");
+  height: 285px;
   width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 .about-img {
   width: 180px;
@@ -1828,41 +1848,6 @@ div:where(.swal2-container) div:where(.swal2-popup) {
   box-shadow: var(--box-shadow-w);
   background-color: #000 !important;
   border-radius: 20px;
-}
-.image2 {
-  width: 200px;
-  text-align: center;
-  margin: auto;
-}
-.image2 > .acordian {
-  position: fixed;
-  left: -203px;
-  top: 30%;
-  padding: 10px;
-  transition: 0.76s ease-in-out;
-
- height: 280px;;
-  transform: rotate(90deg);
-}
-.image2 > .acordian:hover{
-  left: 0;
-}
-.image2 > .acordian > .header > p{
-  font-size: 20px;
-  font-weight: 600;
-}
-.image2 > .acordian > .header {
-
-  width: 200px;
-  border-radius:7px 7px 0px 0px;
-}
-.image2 > .acordian > .acordian-detail {
-  position: relative;
-  top: 28px;
-  height: 142px;
-  box-shadow: var(--box-shadowinside);
-  transform: rotate(-90deg);
-  color: red;
 }
 
 

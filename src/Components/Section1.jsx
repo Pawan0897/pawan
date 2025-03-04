@@ -125,9 +125,9 @@ export default function Section1() {
                   <div className="icon-box1">
                     <ul>
                       <li>
-                        <a className="button">
+                        <Link to="mailto:pawankumarwebdev@gmail.com" className="button">
                           <MailOutlineIcon />
-                        </a>
+                        </Link>
                       </li>
 
                       <li>

@@ -18,7 +18,7 @@ function Section2() {
               <div className="col-md-12 mb-3 col-lg-4 ">
                 <div className="what-do ">
                   <div className="do-sec  p-4">
-                    <h3 className="font-styleXX ">Todo List </h3>
+                    <h3 className="font-styleXX ">Todo-List </h3>
                     <p className="">
                       To-Do List Application that allows users to manage their
                       tasks efficiently. This project focuses on user

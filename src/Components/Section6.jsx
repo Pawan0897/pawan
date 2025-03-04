@@ -90,13 +90,13 @@ export default function Section6() {
                   return (
                     element?.project == "traning" && (
                       <>
-                        <p>Phone : +91{element?.contactinfo?.phone}</p>
-                        <p>E-Mail : {element?.contactinfo?.email}</p>
+                        <p>Phone : +91 9781222386</p>
+                        <p>E-Mail : pawankumarwebdev@gmail.com</p>
 
                         <div className="icon-box pb-5">
                           {/* /////////////////////////////////////// */}
                           <div className="social-login-icons">
-                            <Link to={element?.social_link?.whatsapp}>
+                            <Link to="https://wa.me/919781222386">
                               <div className="socialcontainer">
                                 {/* ///////////////////////////////  icon one instagram */}
                                 <div className="icon-2 social-icon-1-1">
@@ -212,13 +212,13 @@ export default function Section6() {
             </div>
           )}
 
-         {/* ****************************************  Form */}
+          {/* ****************************************  Form */}
           <div className="col-md-7  col-lg-8 ">
             <div className="contact-form p-5">
-            <h2 className="font-styleX mb-5">
-          Let<strong className="bgcolortext">'</strong>
-          s Ta<strong className="bgcolortext">lk</strong>
-        </h2>
+              <h2 className="font-styleX mb-5">
+                Let<strong className="bgcolortext">'</strong>s Ta
+                <strong className="bgcolortext">lk</strong>
+              </h2>
               <form>
                 <div className="row  mt-3">
                   <div className="wave"></div>

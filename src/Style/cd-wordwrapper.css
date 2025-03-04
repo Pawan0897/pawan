@@ -378,6 +378,43 @@ xclip
   font-size: 4vw;
 }
 /* ********************------------ Responsive --------- */
+/* ******************slider hover button  */
+.image2 {
+  width: 200px;
+  text-align: center;
+  margin: auto;
+}
+.image2 > .acordian {
+  position: fixed;
+  left: -203px;
+  top: 30%;
+  padding: 10px;
+  transition: 0.76s ease-in-out;
+
+ height: 280px;;
+  transform: rotate(90deg);
+}
+.image2 > .acordian:hover{
+  left: 0;
+}
+.image2 > .acordian > .header > p{
+  font-size: 20px;
+  font-weight: 600;
+}
+.image2 > .acordian > .header {
+
+  width: 200px;
+  border-radius:7px 7px 0px 0px;
+}
+.image2 > .acordian > .acordian-detail {
+  position: relative;
+  top: 28px;
+  height: 142px;
+  box-shadow: var(--box-shadowinside);
+  transform: rotate(-90deg);    background-color: #191919;
+  color: red;
+}
+
 /* *********************** 1024 */
 
 @media (max-width: 1025px) {
@@ -389,6 +426,25 @@ xclip
 
 /* *************************** 768 width style */
 @media (max-width: 768px) {
+  
+  /* ************************* cursor */
+  .cursor-dot {
+    display: none;
+  }
+  .curson-outline {
+    display: none;
+  }
+  .cursor-dot,
+  .curson-outline {
+    display: none;
+  }
+  .cursor-dot, .curson-outline {
+   display: none;
+  }
+  
+  .curson-outline {
+    display: none;
+  }
   /* ***************** Section !n 1 */
 
   .pt {
@@ -743,7 +799,7 @@ xclip
   .image2 > .acordian {
     position: fixed;
     left: -55%;
-    top: -2%;
+    top: 4%;
   }
   .image2 > .acordian:hover {
     left: -13%;

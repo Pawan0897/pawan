@@ -6,7 +6,7 @@ function Section3() {
           <div className="col-md-12">
             <div className="resum">
               <p className="text-center bgcolortext">
-                Visit my portfolio and keep your feedback
+              Check Out My Work & Let Me Know Your Feedback!
               </p>
 
               <h2 className="text-center">
