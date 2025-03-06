@@ -1,20 +1,41 @@
 import user from "../Images/port4.png";
 import "../Style/cd-wordwrapper.css";
-import "../JS/cdjs-wordwrapper.js";;
+import "../JS/cdjs-wordwrapper.js";
 import "../Style/Icon.css";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { Link } from "react-router-dom";
+import Particles from "./Particles.jsx";
 // ***********************************
 
 export default function Section1() {
-  
   return (
     <>
       {/* ******************************* */}
 
       <div className="container-fluid p-2">
+      {/* <div
+          style={{
+            width: "100%",
+            height: "600px",
+            bottom: "0",
+            top:"0",
+            zIndex: "-1",
+            position: "absolute",
+          }}
+        >
+          <Particles
+            particleColors={["#ffffff", "#ffffff"]}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+          </div> */}
         <div className="row justify-content-center align-items-center ">
           <div className="col-md-12 col-lg-4">
             <div
@@ -125,7 +146,10 @@ export default function Section1() {
                   <div className="icon-box1">
                     <ul>
                       <li>
-                        <Link to="mailto:pawankumarwebdev@gmail.com" className="button">
+                        <Link
+                          to="mailto:pawankumarwebdev@gmail.com"
+                          className="button"
+                        >
                           <MailOutlineIcon />
                         </Link>
                       </li>
