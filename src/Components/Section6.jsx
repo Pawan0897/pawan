@@ -82,8 +82,7 @@ export default function Section6() {
                 </div>
                 <h2 className="font-styleXX mt-4">Open for Work</h2>
                 <p>
-                  I am available for freelance work. Connect with me via and
-                  call in to my account.
+                  I am available for freelance work. Connect with me 
                 </p>
                 {/* ////////////////////////// fetch data */}
                 {data?.data?.map((element) => {

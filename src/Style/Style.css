@@ -568,44 +568,7 @@ li {
   justify-content: center;
 }
 /* ////////////////////////// section 4 */
-.carousel-control-next {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  padding: 0;
-  right: 5%;
-  height: 60px;
-  background: var(--bg-color-w);
-  box-shadow: var(--box-shadow-w);
-  text-align: center;
-  border: 0;
-  opacity: 0.5;
-  transition: opacity 0.15s ease;
-}
-.carousel-control-prev {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 82%;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  padding: 0;
-  height: 60px;
-  background: var(--bg-color-w);
-  box-shadow: var(--box-shadow-w);
-  text-align: center;
-  border: 0;
-  opacity: 0.5;
-  transition: opacity 0.15s ease;
-}
+
 .carousel-control-prev:hover {
   box-shadow: var(--box-shadowinside);
 }

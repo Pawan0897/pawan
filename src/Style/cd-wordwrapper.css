@@ -391,27 +391,27 @@ xclip
   padding: 10px;
   transition: 0.76s ease-in-out;
 
- height: 280px;;
+  height: 280px;
   transform: rotate(90deg);
 }
-.image2 > .acordian:hover{
+.image2 > .acordian:hover {
   left: 0;
 }
-.image2 > .acordian > .header > p{
+.image2 > .acordian > .header > p {
   font-size: 20px;
   font-weight: 600;
 }
 .image2 > .acordian > .header {
-
   width: 200px;
-  border-radius:7px 7px 0px 0px;
+  border-radius: 7px 7px 0px 0px;
 }
 .image2 > .acordian > .acordian-detail {
   position: relative;
   top: 28px;
   height: 142px;
   box-shadow: var(--box-shadowinside);
-  transform: rotate(-90deg);    background-color: #191919;
+  transform: rotate(-90deg);
+  background-color: #191919;
   color: red;
 }
 
@@ -426,7 +426,6 @@ xclip
 
 /* *************************** 768 width style */
 @media (max-width: 768px) {
-  
   /* ************************* cursor */
   .cursor-dot {
     display: none;
@@ -438,10 +437,11 @@ xclip
   .curson-outline {
     display: none;
   }
-  .cursor-dot, .curson-outline {
-   display: none;
+  .cursor-dot,
+  .curson-outline {
+    display: none;
   }
-  
+
   .curson-outline {
     display: none;
   }
@@ -489,17 +489,17 @@ xclip
     font-weight: 650;
     padding: 0px 25px;
     font-size: 15px;
-}
+  }
 
   .res-detail > ul {
     height: 0px;
     letter-spacing: 1px;
   }
   /* *************** sectio 4 */
- 
+
   /* ****************************** Testinomial */
-  .p768{
-    padding:0px !important;
+  .p768 {
+    padding: 0px !important;
   }
   .carousel-control-prev {
     position: absolute;
@@ -539,6 +539,44 @@ xclip
     opacity: 0.5;
     transition: opacity 0.15s ease;
   }
+  .carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  padding: 0;
+  right: 5%;
+  height: 60px;
+  background: var(--bg-color-w);
+  box-shadow: var(--box-shadow-w);
+  text-align: center;
+  border: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+.carousel-control-prev {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 82%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  padding: 0;
+  height: 60px;
+  background: var(--bg-color-w);
+  box-shadow: var(--box-shadow-w);
+  text-align: center;
+  border: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
   .test-detail {
     text-align: justify;
     padding: 7px;
@@ -559,6 +597,44 @@ xclip
   .carousel-indicators {
     bottom: -47px;
     left: -52px;
+  }
+  .carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    padding: 0;
+    right: 5%;
+    height: 60px;
+    background: var(--bg-color-w);
+    box-shadow: var(--box-shadow-w);
+    text-align: center;
+    border: 0;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+  }
+  .carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 82%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    padding: 0;
+    height: 60px;
+    background: var(--bg-color-w);
+    box-shadow: var(--box-shadow-w);
+    text-align: center;
+    border: 0;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
   }
   /* *********************** toggle */
   .navbar-toggler button span svg {
@@ -590,7 +666,7 @@ xclip
   .calculate-btn {
     width: 70%;
     transform: rotate(45deg);
-}
+  }
 }
 
 /* ********************************************************************* 468 */
@@ -600,7 +676,7 @@ xclip
   .fc-toolbar-chunk > .fc-today-button {
     display: none !important;
   }
-  .p768{
+  .p768 {
     padding: 3rem !important;
   }
   .fc .fc-toolbar-title {
@@ -725,24 +801,24 @@ xclip
 
     height: 78px;
   }
-   /* ************* calculater */
-   .calculate-btn {
+  /* ************* calculater */
+  .calculate-btn {
     width: 65%;
     transform: rotate(45deg);
-}
- /* **********************portfolio */
- .res-detail > ul > li {
-  font-weight: 650;
-  padding: 0px 10px;
-  font-size: 13px;
-}
+  }
+  /* **********************portfolio */
+  .res-detail > ul > li {
+    font-weight: 650;
+    padding: 0px 10px;
+    font-size: 13px;
+  }
 }
 /* ************************************************************ &$^ 376*/
 @media screen and (max-width: 377px) {
   .image2 > .acordian:hover {
     left: -12%;
   }
-  .p768{
+  .p768 {
     padding: 3rem !important;
   }
   .image2 > .acordian > .header > p {
@@ -758,13 +834,55 @@ xclip
   .calculate-btn {
     width: 65%;
     transform: rotate(45deg);
+  }
+  /* **********************************portfolio */
+  .res-detail > ul > li {
+    font-weight: 650;
+    padding: 0px 10px;
+    font-size: 11px;
+  }
+  /* ***************************  */
+  .carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 53%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    padding: 0;
+    height: 45px;
+    background: var(--bg-color-w);
+    box-shadow: var(--box-shadow-w);
+    text-align: center;
+    border: 0;
+    opacity: 0.5;
+    transition: opacity 0.15sease;
+  }
+  .carousel-control-next {
+    position: absolute;
+    top: 0%;
+    bottom: 0;
+    z-index: 1;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    padding: 0;
+    right: 15%;
+    height: 45px;
+    background: var(--bg-color-w);
+    box-shadow: var(--box-shadow-w);
+    text-align: center;
+    border: 0;
+    opacity: 0.5;
+    transition: opacity 0.15sease;
 }
-/* **********************************portfolio */
-.res-detail > ul > li {
-  font-weight: 650;
-  padding: 0px 10px;
-  font-size: 11px;
-}
+
+
 }
 
 /* ******************************************************************* 320 */
@@ -774,7 +892,7 @@ xclip
   .fc-toolbar-chunk > .fc-today-button {
     display: none !important;
   }
-  .p768{
+  .p768 {
     padding: 3rem !important;
   }
   .fc .fc-toolbar-title {
@@ -794,7 +912,7 @@ xclip
     font-weight: 650;
     padding: 1px 7px;
     font-size: 9px;
-}
+  }
   /* ********************* */
   .image2 > .acordian {
     position: fixed;
@@ -804,7 +922,6 @@ xclip
   .image2 > .acordian:hover {
     left: -13%;
   }
- 
 }
 
 /* ********************* Stripe */
