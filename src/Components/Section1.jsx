@@ -13,14 +13,11 @@ export default function Section1() {
   return (
     <>
       {/* ******************************* */}
-
-      <div className="container-fluid p-2">
-      {/* <div
+      <div
           style={{
             width: "100%",
-            height: "600px",
+            top: "0",
             bottom: "0",
-            top:"0",
             zIndex: "-1",
             position: "absolute",
           }}
@@ -35,14 +32,17 @@ export default function Section1() {
             alphaParticles={false}
             disableRotation={false}
           />
-          </div> */}
+        </div>
+      <div className="container-fluid p-2">
+     
         <div className="row justify-content-center align-items-center ">
           <div className="col-md-12 col-lg-4">
             <div
               className="user-image  animate__animated animate__bounceInLeft  "
               id="pk"
             >
-              <img src={user} width={"100%"} alt="" />
+            
+            <img src={user}  width={"100%"}/>
             </div>
           </div>
           <div className="col-md-12 col-lg-8 ps-5 pt animate__animated  animate__bounceInRight">

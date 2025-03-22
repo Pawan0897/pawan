@@ -7,7 +7,7 @@ function Section2() {
       <div
           style={{
             width: "100%",
-            height: "600px",
+            height : "600px",
             top: "0",
             bottom: "0",
             zIndex: "-1",
@@ -34,7 +34,7 @@ function Section2() {
 
           <>
             <div className="row ">
-              <p className="text-center font-bold bgcolortext">Feactures</p>
+              <p className="text-center font-bold bgcolortext">Features</p>
               <h2 className="mb-5 pb-3 text-center font-styleX ">
                 what i <strong className="bgcolortext">do</strong>
               </h2>

@@ -2,20 +2,38 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../Components/Images/layer5.png"
+// import { useEffect, useState } from "react";
+// import Loader from "./Loader";
 const Header = () => {
+  // const [loader, setloader] = useState(false);
+
+  // useEffect(() => {
+  //   setloader(true);
+  //   const timer = setTimeout(() => {
+  //     setloader(false)
+  //   }, 2000)
+  //   return () => clearTimeout(timer)
+  // }, [location.pathname])
+
+
+
   return (
     <>
+      {/* {
+        loader ? <Loader />
+
+          : location.pathname
+      } */}
       {/* ************************************************************************************ */}
-      <Navbar expand="lg" className="navbar-expand-lg   bg-bodyNav">
+      <Navbar expand="lg" className="navbar-expand-lg bg-bodyNav">
         <Container>
           <Navbar.Brand href="#home">
             {" "}
             <Link className="navbar-brand" to="/">
-              {/* M<strong className="bgcolortext">y </strong>Jo
+              M<strong className="bgcolortext">y </strong>Jo
               <strong className="bgcolortext">ur</strong>ne
-              <strong className="bgcolortext">y</strong> */}
-              <img src={logo}  width={90}/>
+              <strong className="bgcolortext">y</strong>
+
             </Link>
           </Navbar.Brand>
           {/* *********************** */}
@@ -26,9 +44,8 @@ const Header = () => {
               <Nav.Link>
                 <Link
                   to="/"
-                  className={`nav-link bg-navtext ${
-                    location.pathname === "/" ? "navborder bgcolortext" : ""
-                  }`}
+                  className={`nav-link bg-navtext ${location.pathname === "/" ? "navborder bgcolortext" : ""
+                    }`}
                 >
                   Home
                 </Link>
@@ -37,11 +54,10 @@ const Header = () => {
               <Nav.Link>
                 <Link
                   to="/calender"
-                  className={`nav-link bg-navtext ${
-                    location.pathname === "/calender"
-                      ? "navborder bgcolortext"
-                      : ""
-                  }`}
+                  className={`nav-link bg-navtext ${location.pathname === "/calender"
+                    ? "navborder bgcolortext"
+                    : ""
+                    }`}
                 >
                   Calendar
                 </Link>
@@ -50,11 +66,10 @@ const Header = () => {
               <Nav.Link>
                 <Link
                   to="/stripe"
-                  className={`nav-link bg-navtext ${
-                    location.pathname === "/stripe"
-                      ? "navborder bgcolortext"
-                      : ""
-                  }`}
+                  className={`nav-link bg-navtext ${location.pathname === "/stripe"
+                    ? "navborder bgcolortext"
+                    : ""
+                    }`}
                 >
                   Stripe
                 </Link>
@@ -63,11 +78,10 @@ const Header = () => {
               <Nav.Link>
                 <Link
                   to="/calculater"
-                  className={`nav-link bg-navtext ${
-                    location.pathname === "/calculater"
-                      ? "navborder bgcolortext"
-                      : ""
-                  }`}
+                  className={`nav-link bg-navtext ${location.pathname === "/calculater"
+                    ? "navborder bgcolortext"
+                    : ""
+                    }`}
                 >
                   Calculator
                 </Link>
@@ -75,9 +89,8 @@ const Header = () => {
               {/* ****************************** */}
               <Nav.Link>
                 <Link
-                  className={`${
-                    location.pathname == "/form" ? "navborder bgcolortext" : ""
-                  } nav-link bg-navtext`}
+                  className={`${location.pathname == "/form" ? "navborder bgcolortext" : ""
+                    } nav-link bg-navtext`}
                   // onClick={(e) => {
                   //   e.preventDefault();
                   //   if (location.pathname === "/") {
@@ -95,11 +108,10 @@ const Header = () => {
               <Nav.Link>
                 <Link
                   to="/contactus"
-                  className={`nav-link bg-navtext ${
-                    location.pathname === "/contactus"
-                      ? "navborder bgcolortext"
-                      : ""
-                  }`}
+                  className={`nav-link bg-navtext ${location.pathname === "/contactus"
+                    ? "navborder bgcolortext"
+                    : ""
+                    }`}
                 >
                   Contact
                 </Link>

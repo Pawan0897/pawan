@@ -56,7 +56,7 @@ export default function Section4() {
                     <div className="carousel-inner">
                       <div className="carousel-item active">
                         <div className="row justify-content-center align-items-center">
-                          <div className="col-md-5 col-lg-4 p5 p768">
+                          <div className="col-md-5 col-lg-4  p768">
                             <div className="test-img">
                               <img src={testi2} width={"90%"} alt="" />
                             </div>
