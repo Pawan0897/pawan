@@ -27,7 +27,7 @@ const Header = () => {
       {/* ************************************************************************************ */}
       <Navbar expand="lg" className="navbar-expand-lg bg-bodyNav">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand >
             {" "}
             <Link className="navbar-brand" to="/">
               M<strong className="bgcolortext">y </strong>Jo

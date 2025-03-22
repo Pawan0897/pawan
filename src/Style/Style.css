@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 /* ///////////////////////// end  style */
 :root {
   --nav-text: #c4cfde !important;
@@ -158,6 +156,10 @@ li {
   font-weight: 700;
   text-shadow: var(--box-shadowinside);
 }
+.navbar-brand  > a:hover{
+  color: var(--bg-color-white) !important;
+}
+
 
 .links > ul {
   list-style: none;

@@ -21,7 +21,7 @@ export default function Layout() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setlayout(true);
-    }, 3000);
+    }, 2000);
     return () => clearTimeout(timer);
   });
 
