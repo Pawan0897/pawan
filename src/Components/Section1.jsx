@@ -1,48 +1,32 @@
 import user from "../Images/port4.png";
 import "../Style/cd-wordwrapper.css";
-import "../JS/cdjs-wordwrapper.js";
+// import "../JS/cdjs-wordwrapper.js";
 import "../Style/Icon.css";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { Link } from "react-router-dom";
-import Particles from "./Particles.jsx";
+import { useEffect } from "react";
 // ***********************************
 
 export default function Section1() {
+  useEffect(() => {
+    import("../JS/cdjs-wordwrapper.js")
+  }, [])
   return (
     <>
       {/* ******************************* */}
-      <div
-          style={{
-            width: "100%",
-            top: "0",
-            bottom: "0",
-            zIndex: "-1",
-            position: "absolute",
-          }}
-        >
-          <Particles
-            particleColors={["#ffffff", "#ffffff"]}
-            particleCount={200}
-            particleSpread={10}
-            speed={0.1}
-            particleBaseSize={100}
-            moveParticlesOnHover={true}
-            alphaParticles={false}
-            disableRotation={false}
-          />
-        </div>
+
       <div className="container-fluid p-2">
-     
+
         <div className="row justify-content-center align-items-center ">
           <div className="col-md-12 col-lg-4">
             <div
               className="user-image  animate__animated animate__bounceInLeft  "
               id="pk"
             >
-            
-            <img src={user}  width={"100%"}/>
+
+              <img src={user} width={"100%"} />
             </div>
           </div>
           <div className="col-md-12 col-lg-8 ps-5 pt animate__animated  animate__bounceInRight">
@@ -81,7 +65,7 @@ export default function Section1() {
             {/* ////////////////////  start  */}
             <div className="skill">
               <div className="row">
-                <div className="col-md-5">
+                <div className="col-md-7 col-lg-6 ">
                   <div className="icon-box">
                     <ul>
                       <li>
@@ -142,10 +126,10 @@ export default function Section1() {
                     </ul>
                   </div>
                 </div>
-                <div className="col-md-5 offset-md-1">
+                <div className="col-md-5 col-lg-6 ">
                   <div className="icon-box1">
                     <ul>
-                      <li>
+                      <li> 
                         <Link
                           to="mailto:pawankumarwebdev@gmail.com"
                           className="button"

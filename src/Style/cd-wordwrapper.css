@@ -348,6 +348,7 @@ xtype
 xclip 
 
 -------------------------------- */
+
 .cd-headline.clip span {
   display: inline-block;
   padding: 0.2em 0;
@@ -436,9 +437,7 @@ xclip
 } */
 /* ------------------------------------------------------------------------------- */
 
-
 /* ********************------------ Responsive --------- */
-
 
 /* ---------------------------------------------------------------------------------- */
 /* ******************slider hover button  */
@@ -477,6 +476,22 @@ xclip
   background-color: #191919;
   color: red;
 }
+/* *******************************************  1281 to 1026 */
+@media screen and (max-width: 1280px) and (min-width: 1026px) {
+  .title > span {
+    float: none;
+    display: table;
+    width: auto;
+    font-family: sans-serif;
+    font-size: 50px;
+    line-height: 0px;
+    font-weight: 800;
+    text-transform: capitalize;
+  }
+  .cd-words-wrapper {
+    font-size: 50px;
+  }
+}
 
 /* ************************************************************* 1024 */
 
@@ -485,8 +500,102 @@ xclip
     width: 73%;
     transform: rotate(45deg);
   }
+  /* ************* slider */
+  .title > span {
+    float: none;
+    display: table;
+    width: auto;
+    font-family: sans-serif;
+    font-size: 39px;
+    line-height: 0px;
+    font-weight: 800;
+    text-transform: capitalize;
+  }
+  .cd-words-wrapper {
+    font-size: 40px;
+  }
+  .icon-box > ul > li {
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+    position: relative;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    transition: 0.1s;
+    margin: 7px 10px;
+    display: inline-block;
+    box-shadow: var(--box-shadowinside);
+    text-transform: uppercase;
+  }
+  .icon-box1 > ul {
+    padding: 0;
+  }
+  /* *************************** icon testinomial */
+  .carousel-control-next {
+    position: absolute;
+    top: 38%;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    padding: 0;
+    right: -50px;
+    height: 60px;
+    background: var(--bg-color-w);
+    box-shadow: var(--box-shadow-w);
+    text-align: center;
+    border: 0;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+  }
+  .carousel-control-prev {
+    position: absolute;
+    top: 38%;
+    bottom: 0;
+    left: -9%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    padding: 0;
+    height: 60px;
+    background: var(--bg-color-w);
+    box-shadow: var(--box-shadow-w);
+    text-align: center;
+    border: 0;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+  }
+  .test-detail {
+    margin-top: 0;
+    background: var(--bg-color-w);
+    box-shadow: var(--box-shadow-w);
+  }
 }
-
+/* **********************************************************  854px */
+@media screen and (max-width: 854px) and (min-width: 769px) {
+  .res-detail > ul > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 650;
+    padding: 0px 30px;
+    font-size: 18px;
+    color: #d4d1d1;
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+    box-shadow: var(--box-shadowinside);
+    /* background: var(--bg-color-w); */
+  }
+  .icon-box1 > ul{
+    padding-left: 2rem;
+  }
+}
 /* *********************************************************** 768 width style */
 @media (max-width: 768px) {
   /* ************************* cursor */
@@ -499,6 +608,9 @@ xclip
   .cursor-dot,
   .curson-outline {
     display: none;
+  }
+  .icon-box1 > ul{
+    padding-left: 2rem;
   }
   .cursor-dot,
   .curson-outline {
@@ -542,7 +654,8 @@ xclip
     font-size: 7vw;
   }
   .title > span {
-    font-size: 8vw;
+    font-size: 28px;
+    line-height: 0px;
   }
   .user-detail > p {
     padding-right: 0px;
@@ -564,7 +677,10 @@ xclip
   .p768 {
     padding: 0px;
   }
-  
+  .navbar-toggler {
+    background-color: #c4cfde;
+}
+
   .carousel-control-prev {
     position: absolute;
     top: 40%;
@@ -611,7 +727,7 @@ xclip
     background: var(--bg-color-w);
     box-shadow: var(--box-shadowinside);
   }
-  
+
   .test-icon {
     display: none !important;
   }
@@ -657,13 +773,56 @@ xclip
     transform: rotate(45deg);
   }
 }
+/* ******************************************* ***************************************   430  */
+@media screen and (max-width: 431px) and (min-width: 427px) {
+  .res-detail > ul > li {
+    font-weight: 650;
+    padding: 0px 10px;
+    font-size: 14px;
+  }
+  .icon-box1 > ul{
+    padding-left: 2rem;
+  }
+  /* testinmial */
+  .test-detail {
+    text-align: justify;
+    padding: 7px;
+    margin-top: 7px;
+    margin-left: 10px;
+    /* margin-top: 24px; */
+    background: var(--bg-color-w);
+    box-shadow: var(--box-shadowinside);
+  }
+  .p0 {
+    padding: 3rem !important;
+  }
+  .test-detail > p {
+    margin-top: 10px;
+    color: var(--font-cl);
+    font-size: 15px;
+    line-height: 28px;
+  }
+  /* *************** H2 */
+  .font-styleX {
+    font-family: sans-serif;
+    font-size: 55px;
+    line-height: 46px;
+    font-weight: 800;
+  }
+  .mt-5 {
+    margin-top: 0px !important;
+  }
+}
 
-/* *************************************************************************************** 468 */
+/* *************************************************************************************** 425 */
 @media screen and (max-width: 426px) {
   .fc-toolbar-chunk > .fc-button-group > .fc-prev-button,
   .fc-toolbar-chunk > .fc-button-group > .fc-next-button,
   .fc-toolbar-chunk > .fc-today-button {
     display: none !important;
+  }
+  .icon-box1 > ul{
+    padding-left: 2rem;
   }
   .p768 {
     padding: 3rem !important;
@@ -802,15 +961,39 @@ xclip
     font-size: 13px;
   }
 }
+
+/* ******************************************* 390 */
+@media screen and (max-width: 391px) and (min-width: 378px) {
+  .res-detail > ul > li {
+    font-weight: 650;
+    padding: 0px 10px;
+    font-size: 11px;
+  }
+  
+  .icon-box1 > ul{
+    padding-left: 2rem;
+  }
+  .title > span {
+    font-size: 26px;
+    line-height: 0px;
+}
+}
+
 /* ************************************************************ &$^ 376*/
 @media screen and (max-width: 377px) {
-  
   .p768 {
     padding: 3rem !important;
   }
+  .title > span {
+    font-size: 25px;
+    line-height: 0px;
+}
   .image2 > .acordian > .header > p {
     font-size: 14px;
     font-weight: 600;
+  }
+  .icon-box1 > ul{
+    padding-left: 2rem;
   }
   .image2 > .acordian {
     position: fixed;
@@ -871,13 +1054,41 @@ xclip
     transition: opacity 0.15sease;
   }
 }
-
+/* ********************************************  344 */
+@media screen and (max-width: 345px) and (min-width: 323px) {
+  .res-detail > ul > li {
+      font-weight: 650;
+      padding: 0px 9px;
+      font-size: 10px;
+  }
+  .icon-box1 > ul{
+    padding-left: 2rem;
+  }
+}
+/* ******************************************* 320 */
+@media screen and (max-width: 361px) and (min-width: 346px) {
+  .res-detail > ul > li {
+    font-weight: 650;
+    padding: 0px 10px;
+    font-size: 10px;
+  }
+  .icon-box1 > ul{
+    padding-left: 2rem;
+  }
+  .title > span {
+    font-size: 24px;
+    line-height: 0px;
+}
+}
 /* ******************************************************************* 320 */
 @media screen and (max-width: 321px) {
   .fc-toolbar-chunk > .fc-button-group > .fc-prev-button,
   .fc-toolbar-chunk > .fc-button-group > .fc-next-button,
   .fc-toolbar-chunk > .fc-today-button {
     display: none !important;
+  }
+  .icon-box1 > ul{
+    padding-left: 2rem;
   }
   .p768 {
     padding: 3rem !important;
@@ -900,6 +1111,10 @@ xclip
     padding: 1px 7px;
     font-size: 9px;
   }
+  .title > span {
+    font-size: 20px;
+    line-height: 0px;
+}
   /* ********************* */
   .image2 > .acordian {
     position: fixed;

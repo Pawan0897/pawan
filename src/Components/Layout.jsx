@@ -41,9 +41,10 @@ export default function Layout() {
                   </div>
                 }
               >
-                {showlayout ? (
+                {showlayout && (
                   <Index />
-                ) : (
+                )}
+                {!showlayout && (
                   <div className="load">
 
 
