@@ -1,7 +1,7 @@
 import user from "../Images/port4.png";
 import "../Style/cd-wordwrapper.css";
 // import "../JS/cdjs-wordwrapper.js";
-import "../Style/Icon.css";
+
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -129,7 +129,7 @@ export default function Section1() {
                 <div className="col-md-5 col-lg-6 ">
                   <div className="icon-box1">
                     <ul>
-                      <li> 
+                      <li>
                         <Link
                           to="mailto:pawankumarwebdev@gmail.com"
                           className="button"

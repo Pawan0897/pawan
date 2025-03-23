@@ -204,18 +204,16 @@ export default function Calender() {
                 <div className="float-end">
                   {/* ////////////////////// add button and remove event */}
                   <Button
-                    className={`border-0 bg-danger me-4 ${
-                      eventdetail != true ? "d-block" : "d-none"
-                    }`}
+                    className={`border-0 bg-danger me-4 ${eventdetail != true ? "d-block" : "d-none"
+                      }`}
                     variant="primary"
                     onClick={handleShow}
                   >
                     Add Event
                   </Button>
                   <span
-                    className={`p-3 ${
-                      eventopen == true ? "d-none" : ""
-                    } pe-auto`}
+                    className={`p-3 ${eventopen == true ? "d-none" : ""
+                      } pe-auto`}
                     onClick={() => closeeventdet()}
                   >
                     <a href="">
@@ -335,7 +333,7 @@ export default function Calender() {
         </div>
       </div>
       {/* //////////////////////////////// Add Event Modal ///////////////////////// */}
-      <Modal show={show} centered size="lg"  onHide={handleClose}>
+      <Modal show={show} centered size="lg" onHide={handleClose}>
         <form>
           <Modal.Header closeButton>
             <Modal.Title className="text-color">Add Event</Modal.Title>

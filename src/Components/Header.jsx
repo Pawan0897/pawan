@@ -2,28 +2,13 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-// import { useEffect, useState } from "react";
-// import Loader from "./Loader";
+
 const Header = () => {
-  // const [loader, setloader] = useState(false);
-
-  // useEffect(() => {
-  //   setloader(true);
-  //   const timer = setTimeout(() => {
-  //     setloader(false)
-  //   }, 2000)
-  //   return () => clearTimeout(timer)
-  // }, [location.pathname])
-
 
 
   return (
     <>
-      {/* {
-        loader ? <Loader />
 
-          : location.pathname
-      } */}
       {/* ************************************************************************************ */}
       <Navbar expand="lg" className="navbar-expand-lg bg-bodyNav">
         <Container>

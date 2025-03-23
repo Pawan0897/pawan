@@ -1928,3 +1928,25 @@ div:where(.swal2-container) div:where(.swal2-popup) {
   transform: scale(1);
   transform-origin: center;
 }
+
+ /* *********************** Swal box shadow */
+ .custom-swal-popup {
+  box-shadow: 0px 0px 20px rgba(255, 87, 51, 0.8) !important; /* Glowing effect */
+  border-radius: 10px; /* Optional: Smooth rounded corners */
+}
+div:where(.swal2-container) div:where(.swal2-popup) {
+  box-shadow: var(--box-color-w) !important;
+  display: none;
+  position: relative;
+  box-sizing: border-box;
+  grid-template-columns: minmax(0, 100%);
+  width: var(--swal2-width);
+  max-width: 100%;
+  padding: var(--swal2-padding);
+  border: var(--swal2-border);
+  border-radius: var(--swal2-border-radius);
+  background: var(--swal2-background);
+  color: var(--swal2-color);
+  font-family: inherit;
+  font-size: 1rem;
+}

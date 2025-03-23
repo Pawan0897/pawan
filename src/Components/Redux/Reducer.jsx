@@ -4,7 +4,6 @@ export const Mode = createSlice({
   name: "mode",
   initialState: {
     dark: "",
-    light: "",
     setimg: duck,
     click: false,
   },
@@ -14,9 +13,7 @@ export const Mode = createSlice({
     darkmode: (state, action) => {
       state.dark = action.payload;
     },
-    lightmode: (state, action) => {
-      state.light = action.payload;
-    },
+    
     setduck: (state, action) => {
       state.setimg = action.payload;
     },
@@ -26,5 +23,5 @@ export const Mode = createSlice({
   },
 });
 /**********  darkmode light mode nu export krna through store */
-export const { darkmode, lightmode, setduck, click } = Mode.actions;
+export const { darkmode,  setduck, click } = Mode.actions;
 export default Mode.reducer;
