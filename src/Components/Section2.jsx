@@ -7,7 +7,7 @@ function Section2() {
       <div
           style={{
             width: "100%",
-            height : "600px",
+          
             top: "0",
             bottom: "0",
             zIndex: "-1",
@@ -24,6 +24,7 @@ function Section2() {
             alphaParticles={false}
             disableRotation={false}
           />
+          
         </div>
       <div className="container ">
         <div

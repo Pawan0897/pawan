@@ -7,6 +7,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import Particles from "./Particles.jsx";
 // ***********************************
 
 export default function Section1() {
@@ -15,6 +16,27 @@ export default function Section1() {
   }, [])
   return (
     <>
+    <div
+          style={{
+            width: "100%",
+            height : "600px",
+            top: "0",
+            bottom: "0",
+            zIndex: "-1",
+            position: "absolute",
+          }}
+        >
+          <Particles
+            particleColors={["#ffffff", "#ffffff"]}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
       {/* ******************************* */}
 
       <div className="container-fluid p-2">
