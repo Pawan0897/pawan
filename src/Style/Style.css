@@ -887,21 +887,28 @@ li {
   text-transform: capitalize;
   box-shadow: var(--box-shadow-w), var(--box-shadowinside);
 }
+.event-ds > span {
+  text-align: end;
+    position: absolute;
+    /* left: 0; */
+    /* margin-bottom: 27px; */
+    right: 0;
+    margin-right: 0px;
+}
 .icon {
-  top: 20%;
-  width: 50px;
-  left: -20px;
+  top: 5%;
+  width: 25px;
+  left: 2%;
   background: var(--bg-red);
-  box-shadow: var(--box-shadow-w);
-  height: 50px;
-  border-radius: 50%;
+  box-shadow: var(--box-shadowinside);
+  height: 24px;
   position: absolute;
   cursor: pointer;
   color: #ffff;
 }
 .float-end > span > a {
   color: #d4d1d1;
-
+  
   font-weight: 900;
 }
 /* ///////////////// stripe */

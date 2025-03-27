@@ -8,6 +8,7 @@ import { click, setduck } from "./Redux/Reducer";
 import { useFormik } from "formik";
 import * as yup from "yup";
 export default function Form() {
+  
   // *********************************
     // *************************************** formik
     const formik = useFormik({
@@ -30,6 +31,9 @@ export default function Form() {
 
   const locemail = "pawan@gmail.com";
   const locpass = "12345";
+
+  const img1 = duck1;
+  const img3 = duck3;
 
   const clicker = useSelector((state) => state.user.click);
 
@@ -54,6 +58,8 @@ export default function Form() {
       button.ontouchstart =stopbutton;
       setclick(click(true));
       imgdes(setduck(duck1));
+      
+      
     } else if (locemail !== formik?.values?.email) {
       /******************************************************* */
       button.ontouchstart = movebutton;

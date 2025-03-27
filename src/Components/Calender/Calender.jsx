@@ -17,9 +17,11 @@ import Swal from "sweetalert2";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import DoneIcon from "@mui/icons-material/Done";
 import CloseIcon from "@mui/icons-material/Close";
-import Loader from "../Loader/Loader";
 import "../../JS/cursor.js";
+import { Link, useNavigate, useNavigation } from "react-router-dom";
 export default function Calender() {
+  /******************** storage */
+
   // ///////////// cursor
   const cursorDot = document.querySelector("[data-cursor-dot]");
   const cursorOutline = document.querySelector("[data-cursor-outline]");
@@ -43,10 +45,28 @@ export default function Calender() {
   //   //   { title: "demo", start: new Date(), end: addDays(new Date(), 3) },
   //   //   { title: "function", start: addDays(new Date(), 3) }, // start after how much day your event
   // ];
+  /************************************ Localstorage store the todolist   */
+  const locName = localStorage.getItem("name");
+  const locTitle = localStorage.getItem("title");
+  const locEvent = localStorage.getItem("event");
+  const locStardate = localStorage.getItem("startdate");
+  const locEnddate = localStorage.getItem("enddate");
+  const locDescript = localStorage.getItem("descript");
+  const locColor = localStorage.getItem("color")
+
+  const navigate = useNavigate()
+
+  /********************************************** */
+
+
+
+
+  /************************************************** */
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  // ////////////////////// event show state
+  // *************************************** event show state
   const [eventshow, seteventshow] = useState(false);
   const eventClose = () => seteventshow(false);
   // //////////////// event open adn close
@@ -54,16 +74,11 @@ export default function Calender() {
   const [eventdetail, seteventdetail] = useState(false);
   const [eventopen, setevent] = useState(true);
 
-  // ////////////////////////////////////////////////////////////
-  const { data, refetch, isFetching } = useQuery({
-    queryKey: ["der"],
-    queryFn: () =>
-      axios.get(
-        "https://66e408c7d2405277ed12c7ba.mockapi.io/all/users/all-users"
-      ),
-  });
+  // ***************************************
+  console.log(localStorage);
+
   // console.log(data);
-  //  //////////////////////////////////////
+  //  ***************************************
   const formik = useFormik({
     initialValues: {
       event: true,
@@ -82,80 +97,95 @@ export default function Calender() {
       color: yup.string().required(),
       descript: yup.string().required(),
     }),
-    onSubmit: (values) => eventsubmit.mutate(values),
+    onSubmit: (values) => eventsubmit(values),
   });
+  /*********************** using localstorage to store the event  */
+  const eventsubmit = (values) => {
+    localStorage.setItem("name", values?.name);
+    localStorage.setItem("title", values?.title);
+    localStorage.setItem("startdate", values?.startdate);
+    localStorage.setItem("enddate", values?.enddate);
+    localStorage.setItem("event", true);
+    localStorage.setItem("color", values?.color)
+    localStorage.setItem("descript", values?.descript)
+    navigate("/calender")
+    setShow(false);
+  }
   // /////////////////////// event addd
-  const eventsubmit = useMutation({
-    /**
-     *
-     * @param {*} values
-     * @returns
-     */
-    mutationFn: (values) =>
-      axios.post(
-        "https://66e408c7d2405277ed12c7ba.mockapi.io/all/users/all-users",
-        values
-      ),
-    onSuccess: () => {
-      setShow(false);
-      refetch();
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-start",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        },
-      });
-      Toast.fire({
-        icon: "success",
-        title: "Event Addedd successfully !!!",
-      });
-      formik.setValues({
-        name: "",
-        title: "",
-        startdate: new Date(),
-        enddate: "",
-        color: "",
-        descript: "",
-      });
-    },
-  });
+  // const eventsubmit = useMutation({
+  //   /**
+  //    *
+  //    * @param {*} values
+  //    * @returns
+  //    */
+
+
+  //   mutationFn: (values) =>
+  //     axios.post(
+  //       "https://66e408c7d2405277ed12c7ba.mockapi.io/all/users/all-users",
+  //       values
+  //     ),
+  //   onSuccess: () => {
+  //     setShow(false);
+  //     refetch();
+  //     const Toast = Swal.mixin({
+  //       toast: true,
+  //       position: "top-start",
+  //       showConfirmButton: false,
+  //       timer: 3000,
+  //       timerProgressBar: true,
+  //       didOpen: (toast) => {
+  //         toast.onmouseenter = Swal.stopTimer;
+  //         toast.onmouseleave = Swal.resumeTimer;
+  //       },
+  //     });
+  //     Toast.fire({
+  //       icon: "success",
+  //       title: "Event Addedd successfully !!!",
+  //     });
+  //     formik.setValues({
+  //       name: "",
+  //       title: "",
+  //       startdate: new Date(),
+  //       enddate: "",
+  //       color: "",
+  //       descript: "",
+  //     });
+  //   },
+  // });
   // ///////////////////// delete event
   /******************* data *************************/
-  const deleve = useMutation({
-    mutationFn: (id) => {
-      Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          axios
-            .delete(
-              `https://66e408c7d2405277ed12c7ba.mockapi.io/all/users/all-users/${id}`
-            )
-            .then(() => {
-              refetch();
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success",
-              });
-            });
-        }
-      });
-    },
-    // ///////
-    onSuccess: () => refetch(),
-  });
+  const deleve = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+
+        localStorage.setItem("name", "");
+        localStorage.setItem("title", "");
+        localStorage.setItem("startdate", "");
+        localStorage.setItem("enddate", "");
+        localStorage.setItem("event", false);
+        localStorage.setItem("color", "")
+        localStorage.setItem("descript", "");
+        setShow(false);
+        navigate("/calender")
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
+      }
+    });
+  }
+
+
 
   /******************* data *************************/
 
@@ -176,7 +206,7 @@ export default function Calender() {
     seteventdetail(true);
   };
   console.log(formik?.values);
-  // ///////////////////////////////////
+  // ***************************************
   const closeeventdet = () => {
     seteventdetail(false),
       setevent(true),
@@ -202,123 +232,125 @@ export default function Calender() {
             <div className="calender-sidebar">
               <div className="add-button pt-3 ps-2 ">
                 <div className="float-end">
-                  {/* ////////////////////// add button and remove event */}
+                  {/* *************************************** add button and remove event */}
+
                   <Button
-                    className={`border-0 bg-danger me-4 ${eventdetail != true ? "d-block" : "d-none"
+                    className={`border-0 bg-danger me-4 ${localStorage.getItem("event") !== "true" ? "d-block" : "d-none"
                       }`}
                     variant="primary"
                     onClick={handleShow}
                   >
                     Add Event
                   </Button>
-                  <span
-                    className={`p-3 ${eventopen == true ? "d-none" : ""
-                      } pe-auto`}
-                    onClick={() => closeeventdet()}
-                  >
-                    <a href="">
-                      <CloseIcon />
-                    </a>
-                  </span>
+
+
+
                 </div>
-                {/* ////////////////////////////////////////////////////////// */}
+                {/* ************************************ */}
                 <div className="events mt-5">
                   <ul>
-                    {/* ///////////////////// event with delete button///////////////// */}
-                    {eventopen &&
-                      data?.data?.map((item) => {
-                        return (
-                          item?.event == true && (
-                            <>
-                              <li className="p-3 mt-5">
-                                <a>{item?.title}</a>
-                                <span
-                                  className="del-icon float-end"
-                                  onClick={() => deleve.mutate(item?.id)}
-                                >
-                                  {<DeleteForeverIcon />}
-                                </span>
-                              </li>
-                            </>
-                          )
-                        );
-                      })}
+                    {/* ************** event with delete button ************* */}
 
-                    {/* ////////////////////////////////////////// */}
+                    <li className={`p-3 mt-5  ${localStorage.getItem("event") === "true" && eventopen === true ? "d-block" : "d-none"}`}>
+                      <a>{locTitle}</a>
+                      <span
+                        className="del-icon float-end"
+                        onClick={() => deleve()}
+                      >
+                        {<DeleteForeverIcon />}
+                      </span>
+                    </li>
+
+
+
+
+
+                    {/* *************************************** */}
                   </ul>
                   <div className="event-d  p-3">
-                    {/* ///////////////  event details ///////////// */}
+                    {/* ***************************************  event details *************************************** */}
                     {!eventopen && (
-                      <div className="event-ds ">
-                        <div className="icon del-icon d-flex justify-content-center align-items-center">
+                      <div className="event-ds  ">
+                        <span
+                          className={`p-3  pe-auto`}
+                          onClick={() => closeeventdet()}
+                        >
+                          <Link  className="text-danger">
+                            <CloseIcon />
+                          </Link>
+                        </span>
+                        <div className="icon  del-icon d-flex justify-content-center align-items-center">
                           <DoneIcon />
                         </div>
                         <div className="event-in ms-5 pb-2 pt-2">
                           <p className="">
                             <strong>Event</strong>
                           </p>
-                          <p>{formik?.values?.title}</p>
-                          {/* ///////////// event startdate  */}
+                          <p>{locName}</p>
+                          {/* *************************************** event startdate  */}
                           <p className="">
                             <strong>Start Event </strong>
                           </p>
                           <p>
-                            {moment(formik?.values?.startdate).format(
+                            {moment(locStardate).format(
                               "YYYY-MM-DD"
                             )}
                           </p>
-                          {/* //////////////  end date*/}
+                          {/* ***************************************  end date*/}
                           <p className="">
                             <strong>End Event </strong>
                           </p>
                           <p>
-                            {moment(formik?.values?.enddate).format(
+                            {moment(locEnddate).format(
                               "YYYY-MM-DD"
                             )}
                           </p>
-                          {/* \////////////////////////  details */}
+                          {/* ***************************************  details */}
                           <p className="">
                             <strong>Event Details </strong>
                           </p>
-                          <p>{formik?.values?.descript}</p>
+                          <p>{locDescript}</p>
                         </div>
                       </div>
                     )}
-                    {/* ////////////////////////////  event detail */}
-                    {/* /////////////////////////////// */}
+                    {/****************************************  event detail */}
+                    {/* *************************************** */}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          {/* ////////////////////////////////////////////////////// */}
+          {/* ****************************************/}
           <div className="col-md-12 col-lg-8 order-md-1 order-sm-1 order-xs-1 order-1">
             <div className="calender p-5 p1 ">
-              {/* ////////////////////////// calender */}
+              {/**************************************** calender */}
               <FullCalendar
                 plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
                 initialView="dayGridMonth"
                 weekends={true}
-                events={data?.data?.map((item) => {
-                  return {
-                    title: item?.title,
-                    start: item?.startdate,
-                    id: item?.id,
-                    end: moment(item?.enddate).endOf("days").format(),
+                events={[
+
+                  {
+
+                    title: locTitle,
+                    start: moment(locStardate).format(),
+
+                    end: moment(locEnddate).endOf("days").format(),
                     // color:item?.startdate == "2024-10-31" ? "black" : item?.color,
-                    color: item?.color,
-                  };
-                })}
+                    color: locColor
+
+                  }
+                ]}
                 eventClick={(event) => {
                   showevent(event), setevent(false);
                 }}
-                // /////////////////////////////////
+                /**************************************************** */
                 headerToolbar={{
                   left: "prev,next today",
                   center: "title",
                   right: "dayGridMonth,timeGridWeek,timeGridDay",
                 }}
-                // /////////////////////////////////
+                /**************************************************** */
                 editable={true}
                 eventTextColor="#c4cfde"
                 eventChange={() => {
@@ -332,7 +364,7 @@ export default function Calender() {
           </div>
         </div>
       </div>
-      {/* //////////////////////////////// Add Event Modal ///////////////////////// */}
+      {/**************************************************** Add Event ****************************** */}
       <Modal show={show} centered size="lg" onHide={handleClose}>
         <form>
           <Modal.Header closeButton>
@@ -342,7 +374,7 @@ export default function Calender() {
             <div className="container">
               <div className="row">
                 <div className="col-md-6">
-                  {/* /////////////////////////////// */}
+                  {/* *************************************** */}
                   <div className="mb-3 input">
                     <label className="form-label">Your name</label>
                     <input
@@ -358,7 +390,7 @@ export default function Calender() {
                   </div>
                 </div>
                 <div className="col-md-6">
-                  {/* /////////////////////////////////////////////// event name*/}
+                  {/* /**************************************************** NAme */}
                   <div className="mb-3 input">
                     <label className="form-label">Event Name</label>
                     <input
@@ -374,7 +406,7 @@ export default function Calender() {
                   </div>
                 </div>
                 <div className="col-md-4">
-                  {/* ///////////////////////////////////////////////  start date */}
+                  {/**************************************************** Start date */}
                   <div className="mb-3 input">
                     <label className="form-label">Start Event</label>
                     <input
@@ -394,7 +426,7 @@ export default function Calender() {
                   </div>
                 </div>
                 <div className="col-md-4">
-                  {/* /////////////////////////////////////////////////  end date */}
+                  {/* ***************************************  end date */}
                   <div className="mb-3 input">
                     <label className="form-label">End Event</label>
                     <input
@@ -412,7 +444,7 @@ export default function Calender() {
                   </div>
                 </div>
                 <div className="col-md-4">
-                  {/* //////////////////////////////////////////////////////////////  event color */}
+                  {/* ***************************************  event color */}
                   <div className="mb-3 input">
                     <label className="form-label">Event color</label>
                     <input
@@ -428,7 +460,7 @@ export default function Calender() {
                   </div>
                 </div>
                 <div className="col-md-12">
-                  {/* //////////////////////////////////////////  event detail */}
+                  {/* ***************************************  event detail */}
                   <div className="mb-3 input">
                     <label className="form-label">Event Detail</label>
                     <textarea
@@ -460,7 +492,7 @@ export default function Calender() {
           </Modal.Footer>
         </form>
       </Modal>
-      {/* ////////////////////////////////////////////////  show modal event */}
+      {/* ***************************************  show modal event */}
       <Modal show={eventshow} centered onHide={eventClose}>
         <Modal.Header closeButton>
           <Modal.Title>Event </Modal.Title>
@@ -498,7 +530,7 @@ export default function Calender() {
           </Button>
         </Modal.Footer>
       </Modal>
-      {isFetching && <Loader />}
+
     </>
   );
 }
