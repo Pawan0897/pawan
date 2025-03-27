@@ -284,9 +284,9 @@ export default function Calender() {
                         </div>
                         <div className="event-in ms-5 pb-2 pt-2">
                           <p className="">
-                            <strong>Event</strong>
+                            <strong>Event Name</strong>
                           </p>
-                          <p>{locName}</p>
+                          <p>{locTitle}</p>
                           {/* *************************************** event startdate  */}
                           <p className="">
                             <strong>Start Event </strong>
