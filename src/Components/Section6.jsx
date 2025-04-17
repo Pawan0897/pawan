@@ -38,7 +38,7 @@ export default function Section6() {
 
   return (
     <>
-      <hr className="bg-light" />
+      <hr className="bg-light" />``
       <div className="container pt-5 mt-5 mb-5 pb-5 mt0">
         <h2 className="font-styleX mb-5">
           Contact wi<strong className="bgcolortext">th</strong>{" "}

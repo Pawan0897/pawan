@@ -44,7 +44,7 @@ const Header = () => {
                     : ""
                     }`}
                 >
-                  Calendar
+                  TodoList
                 </Link>
               </Nav.Link>
               {/* ****************************** */}

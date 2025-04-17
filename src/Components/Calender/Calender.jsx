@@ -10,7 +10,6 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import moment from "moment/moment";
-import { useMutation, useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Swal from "sweetalert2";
 /******************************* icon */
@@ -275,7 +274,7 @@ export default function Calender() {
                           className={`p-3  pe-auto`}
                           onClick={() => closeeventdet()}
                         >
-                          <Link  className="text-danger">
+                          <Link className="text-danger">
                             <CloseIcon />
                           </Link>
                         </span>
