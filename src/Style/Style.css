@@ -44,6 +44,9 @@ body {
   font-size: 16px;
   font-weight: 630;
 }
+.bg-navtext:hover{
+  color: #dc3545 !important;
+}
 .bgcolortext {
   color: #dc3545 !important;
 }
@@ -1957,3 +1960,22 @@ div:where(.swal2-container) div:where(.swal2-popup) {
   font-family: inherit;
   font-size: 1rem;
 }
+/* ********************* scrollrt */
+/* General scrollbar styles */
+::-webkit-scrollbar {
+  width: 13px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background-color: #dc3545;
+  background-clip: padding-box;
+  border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-track {
+  background-color: #bbbbbb;
+  }
+  
+ 
+  
+  

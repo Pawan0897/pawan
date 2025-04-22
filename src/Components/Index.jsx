@@ -7,6 +7,7 @@ import Section3 from "./Section3";
 import Section4 from "./Section4";
 import Section5 from "./Section5";
 import Section6 from "./Section6";
+// import Header from "../Header/Header";/
 
 export default function Index() {
   useEffect(() => {
@@ -32,13 +33,12 @@ export default function Index() {
 
   return (
     <>
-
-      <Header />
+ 
 
       <div className="cursor-dot" data-cursor-dot></div>
       <div className="curson-outline" data-cursor-outline></div>
-      <div className="container-fluid position-relative  pt-5">
-
+      <div className="container-fluid position-relative ">
+      <Header />
         <div className="row">
           <div className="col-md-10 offset-md-1 p-3 bg-width">
             
