@@ -10,7 +10,7 @@ const Header = () => {
     <>
 
       {/* ************************************************************************************ */}
-      <Navbar expand="lg" className="navbar-expand-lg bg-bodyNav">
+      <Navbar expand="lg" className="navbar-expand-md bg-bodyNav">
         <Container>
           <Navbar.Brand >
             {" "}

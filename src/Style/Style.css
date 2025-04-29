@@ -1,4 +1,7 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
 /* ///////////////////////// end  style */
 :root {
   --nav-text: #c4cfde !important;
@@ -43,15 +46,17 @@ body {
   text-transform: capitalize;
   font-size: 16px;
   font-weight: 630;
+  /* transition: .s ease-in-out; */
 }
 .bg-navtext:hover{
   color: #dc3545 !important;
+  border-bottom: 3px solid var(--bg-red) !important;
 }
 .bgcolortext {
   color: #dc3545 !important;
 }
 .bgcolor{
-  background-color:  #ba2937  !important;;
+  background-color:  #ba2937  !important;
 }
 .bgwhite{
   background-color: var(--text-grey);
@@ -1977,5 +1982,168 @@ div:where(.swal2-container) div:where(.swal2-popup) {
   }
   
  
+  /* ***************** Section 7 */
+  .light-line{
+    position: relative;
+    width: 50%;
+    color: var(--bg-red);
+    cursor: pointer;
+    border: 2px solid beige;
+    border-radius: 0.45em;
+    background: none;
+    perspective: 2em;
+    opacity: 0.1;
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 1em;
   
+    /* -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--bg-red),
+      0px 0px 0.5em 0px var(--bg-red);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--bg-red),
+      0px 0px 0.5em 0px var(--bg-red); */
+    box-shadow: inset 0px 0px 0.5em 0px beige,
+      0px 0px 0.5em 0px beige;
+    animation: border-flicker 2s linear infinite;
+
+  }
+  .light-line::before {
+    content: "";
+    position: absolute;
+    top: -239px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 96px;
+    opacity: 0.2;
+    filter: blur(1em);
+    transform: translateY(234%) rotateX(45deg) scale(1, 0.6);
+    background: beige;
+    pointer-events: none;
+  }
   
+  .light-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--bg-red);
+    box-shadow: 0 0 2em 0.2em var(--bg-red);
+    transition: opacity 100ms linear;
+  }
+  @keyframes faulty-flicker {
+    0% {
+      opacity: 0.1;
+    }
+    2% {
+      opacity: 0.1;
+    }
+    4% {
+      opacity: 0.5;
+    }
+    19% {
+      opacity: 0.5;
+    }
+    21% {
+      opacity: 0.1;
+    }
+    23% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0.5;
+    }
+    83% {
+      opacity: 0.4;
+    }
+  
+    87% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes text-flicker {
+    0% {
+      opacity: 0.1;
+    }
+  
+    2% {
+      opacity: 1;
+    }
+  
+    8% {
+      opacity: 0.1;
+    }
+  
+    9% {
+      opacity: 1;
+    }
+  
+    12% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.3;
+    }
+    30% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.7;
+    }
+    72% {
+      opacity: 0.2;
+    }
+  
+    77% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0.9;
+    }
+  }
+  
+  @keyframes border-flicker {
+    0% {
+      opacity: 0.1;
+    }
+    2% {
+      opacity: 1;
+    }
+    4% {
+      opacity: 0.1;
+    }
+  
+    8% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .light{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-card{
+    /* height:300px; */
+    width:100%;
+    background:var(--background);
+    box-shadow: var(--box-shadowinside);
+  }
+  .live-project{
+    overflow: hidden;
+    /* box-shadow: var(--box-shadow-w); */
+    /* border:2px solid var(--border) */
+  }

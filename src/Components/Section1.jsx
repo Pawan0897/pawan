@@ -8,51 +8,56 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Particles from "./Particles.jsx";
+import Aos from "aos";
 // ***********************************
 
 export default function Section1() {
   useEffect(() => {
+    Aos.init({ duration: 2000, once: false }),
     import("../JS/cdjs-wordwrapper.js")
-  }, [])
+  },[])
   return (
     <>
-    <div
-          style={{
-            width: "100%",
-            height : "600px",
-            top: "0",
-            bottom: "0",
-            zIndex: "-1",
-            position: "absolute",
-          }}
-        >
-          <Particles
-            particleColors={["#ffffff", "#ffffff"]}
-            particleCount={200}
-            particleSpread={10}
-            speed={0.1}
-            particleBaseSize={100}
-            moveParticlesOnHover={true}
-            alphaParticles={false}
-            disableRotation={false}
-          />
-        </div>
+      <div
+        style={{
+          width: "100%",
+          height: "600px",
+          top: "0",
+          bottom: "0",
+          zIndex: "-1",
+          position: "absolute",
+        }}
+      >
+        <Particles
+          particleColors={["#ffffff", "#ffffff"]}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+      </div>
       {/* ******************************* */}
 
-      <div className="container-fluid p-2">
+      <div className="container-fluid p-2 mt-4">
 
-        <div className="row justify-content-center align-items-center ">
-          <div className="col-md-12 col-lg-4">
+        <div className="row justify-content-center align-items-center " >
+          {/* ************************************** */}
+          <div className="col-md-12 col-lg-4"  data-aos="fade-in">
             <div
-              className="user-image  animate__animated animate__bounceInLeft  "
+              className="user-image  "  
+             
               id="pk"
             >
 
               <img src={user} width={"100%"} />
             </div>
           </div>
-          <div className="col-md-12 col-lg-8 ps-5 pt animate__animated  animate__bounceInRight">
-            <div className="user-detail p-3 me-3 ">
+          {/* ************************************** */}
+          <div className="col-md-12 col-lg-8 ps-5 pt " data-aos="fade-in">
+            <div className="user-detail p-3 me-3 " >
               <div className="title">
                 <span>
                   Hi, I’m <b>Pawan Kumar </b>
@@ -85,7 +90,7 @@ export default function Section1() {
               </p>
             </div>
             {/* ////////////////////  start  */}
-            <div className="skill">
+            <div className="skill"  >
               <div className="row">
                 <div className="col-md-7 col-lg-6 ">
                   <div className="icon-box">

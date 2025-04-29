@@ -1,15 +1,23 @@
+import Aos from "aos";
+import { useEffect } from "react";
+
 function Section3() {
+  /************************ */
+  useEffect(() => {
+    Aos.init({ duration: 2000, once: false })
+
+  }, [])
   return (
     <>
       <div className="container">
         <div className="row">
           <div className="col-md-12">
             <div className="resum">
-              <p className="text-center bgcolortext">
-              Check Out My Work & Let Me Know Your Feedback!
+              <p className="text-center bgcolortext" data-aos="fade-up">
+                Check Out My Work & Let Me Know Your Feedback!
               </p>
 
-              <h2 className="text-center">
+              <h2 className="text-center" data-aos="fade-up">
                 M<strong className="bgcolortext">y</strong> Por
                 <strong className="bgcolortext"></strong>tfo
                 <strong className="bgcolortext">lio</strong>
@@ -67,6 +75,7 @@ function Section3() {
       {/* ////////////////////////////////////// */}
 
       <>
+      {/* *************************************** */}
         <div className="tab-content" id="nav-tabContent">
           <div
             className="tab-pane fade show active"
@@ -76,7 +85,8 @@ function Section3() {
           >
             <div className="container mt-5 pt-5">
               <div className="row">
-                <div className="col-md-12 col-lg-6 border-edit ps-5 pe-5 p-end  pe-0">
+                {/* *********************************** */}
+                <div className="col-md-12 col-lg-6 border-edit ps-5 pe-5 p-end  pe-0"  data-aos="fade-up">
                   <div className="detail-first p-4 ">
                     <h2>Higher Secondary Education (12th)</h2>
                     <strong className="bgcolortext ">
@@ -94,7 +104,8 @@ function Section3() {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 border-edit ps-5 mb-4 pe-0">
+                {/* ******************************************** */}
+                <div className="col-md-12 col-lg-6 border-edit ps-5 mb-4 pe-0" data-aos="fade-up">
                   <div className="detail-first  p-4">
                     <h2>
                       Bachelor of Science (BSc) in Information Technology{" "}
@@ -117,7 +128,8 @@ function Section3() {
               </div>
             </div>
           </div>
-          {/* ///////////////////////////////////////////// */}
+          {/* *************************************** */}
+
           <div
             className="tab-pane fade"
             id="nav-profile"
@@ -126,6 +138,7 @@ function Section3() {
           >
             <div className="container mt-5 pt-5">
               <div className="row ">
+                {/* ^**************************** */}
                 <div className="col-md-12 col-lg-6 border-edit ps-5 mb-4 p-end pe-5 pe-0">
                   <div className="detail-first p-4 ">
                     <h2>Frontend Development </h2>
@@ -177,7 +190,8 @@ function Section3() {
                     </ul>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 border-edit ps-5 mb-4 pe-0">
+                {/* ****************************************** */}
+                <div className="col-md-12 col-lg-6 border-edit ps-5 mb-4 pe-0" data-aos="fade-up">
                   <div className="detail-first  p-4">
                     <h2>Backend Development</h2>
                     <p>
@@ -239,7 +253,7 @@ function Section3() {
               </div>
             </div>
           </div>
-          {/* ///////////////////////////////////////////// */}
+          {/* *********************************************************** */}
           <div
             className="tab-pane fade"
             id="nav-contact"
@@ -248,7 +262,8 @@ function Section3() {
           >
             <div className="container  mt-5 pt-5">
               <div className="row ">
-                <div className="col-md-12 col-lg-6 border-edit ps-5 mb-4 pe-5 p-end pe-0">
+                {/* ****************************************************** */}
+                <div className="col-md-12 col-lg-6 border-edit ps-5 mb-4 pe-5 p-end pe-0" data-aos="fade-up">
                   <div className="detail-first p-4 ">
                     <h2>Frontend Developer – 4WayDial (1 Year)</h2>
                     <p>
@@ -286,7 +301,8 @@ function Section3() {
                     </ul>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 border-edit ps-5 mb-4 pe-0">
+                {/* *******************************8 */}
+                <div className="col-md-12 col-lg-6 border-edit ps-5 mb-4 pe-0" data-aos="fade-up">
                   <div className="detail-first  p-4">
                     <h2>MERN Stack Training – ToXSL Technologies (6 Months)</h2>
                     <p>
@@ -339,7 +355,7 @@ function Section3() {
               </div>
             </div>
           </div>
-          {/* /////////////////////////////// */}
+          {/* ****************************************** */}
         </div>
       </>
     </>

@@ -3,8 +3,14 @@ import * as yup from "yup";
 import contactimg from "./Images/imgfoot.png";
 import { Link, useLocation } from "react-router-dom";
 import SendMailer from "./Mailer/Server";
+import { useEffect } from "react";
+import Aos from "aos";
 
 export default function Section6() {
+  // ******************************
+  useEffect(() => {
+    Aos.init({duration:2000,once:false})
+  },[])
   const location = useLocation();
   // ////////////////// fromik
   const formik = useFormik({
@@ -40,13 +46,13 @@ export default function Section6() {
     <>
       <hr className="bg-light" />``
       <div className="container pt-5 mt-5 mb-5 pb-5 mt0">
-        <h2 className="font-styleX mb-5">
+        <h2 className="font-styleX mb-5" data-aos="fade-up">
           Contact wi<strong className="bgcolortext">th</strong>{" "}
           <strong className="bgcolortext">me</strong>
         </h2>
         <div className="row justify-content-senter align-items-center">
           {location?.pathname == "/contactus" ? (
-            <div className="col-md-5 col-lg-4 ">
+            <div className="col-md-5 col-lg-4 " data-aos="fade-up">
               <div className="map">
                 <div className="map-box p-4">
                   <iframe
@@ -61,7 +67,7 @@ export default function Section6() {
               </div>
             </div>
           ) : (
-            <div className="col-md-5 col-lg-4">
+            <div className="col-md-5 col-lg-4" data-aos="fade-up">
               <div className="contact-detail p-4">
                 <div className="image">
                   <img src={contactimg} width={"75%"} alt="" />
@@ -193,7 +199,7 @@ export default function Section6() {
           )}
 
           {/* ****************************************  Form */}
-          <div className="col-md-7  col-lg-8 ">
+          <div className="col-md-7  col-lg-8 " data-aos="fade-up">
 
             <div className="contact-form p-5">
               <h2 className="font-styleX mb-5">
