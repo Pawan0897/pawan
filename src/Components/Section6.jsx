@@ -69,7 +69,7 @@ export default function Section6() {
           ) : (
             <div className="col-md-5 col-lg-4" data-aos="fade-up">
               <div className="contact-detail p-4">
-                <div className="image">
+                <div className="image text-center d-flex justify-content-center">
                   <img src={contactimg} width={"75%"} alt="" />
                 </div>
                 <h2 className="font-styleXX mt-4">Open for Work</h2>
