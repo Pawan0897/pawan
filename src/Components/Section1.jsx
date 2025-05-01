@@ -13,7 +13,7 @@ import Aos from "aos";
 
 export default function Section1() {
   useEffect(() => {
-    Aos.init({ duration: 2000, once: false }),
+    Aos.init({ duration: 1500, once: false }),
     import("../JS/cdjs-wordwrapper.js")
   },[])
   return (

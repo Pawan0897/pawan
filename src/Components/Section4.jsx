@@ -1,18 +1,25 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import testi1 from "./Images/test1.jpg";
+import testi1 from "../Images/jeffbezos.jpg";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Quateimg from "./Images/motive-quote.png";
 import testi2 from "./Images/tes2.jpg";
 import testi3 from "./Images/tes3.jpg";
+import { useEffect } from "react";
+import Aos from "aos";
 
 export default function Section4() {
+  // *****************************
+   useEffect(() => {
+      Aos.init({ duration: 1500, once: false })
+    },[])
+    // ******************************
   return (
     <>
       <div className="container">
         <div className="row">
           <div className="col-md-12 p-5 p0">
-            <p className="bgcolortext ps-3">What Inspire Me</p>
-            <h2 className="font-styleX ps-2">
+            <p className="bgcolortext ps-3" data-aos="fade-up">What Inspire Me</p>
+            <h2 className="font-styleX ps-2" data-aos="fade-up">
               {" "}
               Qu<strong className="bgcolortext">o</strong>t
               <strong className="bgcolortext">es</strong>
@@ -25,6 +32,7 @@ export default function Section4() {
                   type="button"
                   data-bs-target="#carouselExampleIndicators"
                   data-bs-slide="prev"
+                  data-aos="fade-up"
                 >
                   <span className="" aria-hidden="true">
                     <i>
@@ -39,6 +47,7 @@ export default function Section4() {
                   type="button"
                   data-bs-target="#carouselExampleIndicators"
                   data-bs-slide="next"
+                  data-aos="fade-up"
                 >
                   <span className="" aria-hidden="true">
                     <i>
@@ -56,13 +65,13 @@ export default function Section4() {
                     <div className="carousel-inner">
                       <div className="carousel-item active">
                         <div className="row justify-content-center align-items-center">
-                          <div className="col-md-5 col-lg-4  p768">
+                          <div className="col-md-5 col-lg-4  p768" data-aos="fade-up">
                             <div className="test-img">
                               <img src={testi2} width={"90%"} alt="" />
                             </div>
                           </div>
                           {/* ***************************************** */}
-                          <div className="col-md-7 col-lg-8 pe-4 ">
+                          <div className="col-md-7 col-lg-8 pe-4 " data-aos="fade-up">
                             <div className="test-icon pt-2">
                               <img src={Quateimg} className="mb-5" alt="" />
                             </div>
@@ -103,7 +112,7 @@ export default function Section4() {
                                 but if you die poor, it’s your mistake. Success
                                 seduces smart people into thinking they can't
                                 lose. Celebrate success, but learning from
-                                failure is far more important."{" "}
+                                failure is far more important."
                                 <strong className="bgcolortext">
                                   – Bill Gates
                                 </strong>
@@ -133,10 +142,10 @@ export default function Section4() {
                                 well. To escape challenges, invent your way out.
                                 Stay stubborn on vision but flexible on
                                 details."
-                              </p>
                               <strong className="bgcolortext">
                                 – Jeff Bezos
                               </strong>
+                              </p>
                             </div>
                           </div>
                         </div>

@@ -6,7 +6,7 @@ import Aos from "aos";
 function Section2() {
   /************************** */
   useEffect(() => {
-    Aos.init({ duration: 2000, once: false })
+    Aos.init({ duration: 1500, once: false })
   },[])
   /**************************** */
   return (

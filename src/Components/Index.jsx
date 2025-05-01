@@ -51,12 +51,12 @@ export default function Index() {
 
             <hr className="mt-5 mb-5 "></hr>
             <Section3 />
-            {/* ************* */}
-            {/* <hr className="mt-5 mb-5 "></hr> */}
-            {/* <Section4 /> */}
             {/* *********** Live project section  */}
             <hr className="mt-4 mb-5" />
             <Section7 />
+            {/* ************* */}
+            <hr className="mt-5 mb-5 "></hr>
+            <Section4 />
             {/* ********** Skills section */}
 
             <hr className="mt-5 mb-5" />

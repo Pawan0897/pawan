@@ -23,7 +23,7 @@ export default function Section7() {
   ]
   // ********************************
   useEffect(() => {
-    Aos.init({ duration: 2000, once: false, })
+    Aos.init({ duration: 1500, once: false, })
   }, [])
   return (
     <>
