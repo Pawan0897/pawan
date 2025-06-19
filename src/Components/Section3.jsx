@@ -1,7 +1,7 @@
 import Aos from "aos";
 import { useEffect } from "react";
 
-function Section3() {
+function  Section3() {
   /************************ */
   useEffect(() => {
     Aos.init({ duration: 1500, once: false })

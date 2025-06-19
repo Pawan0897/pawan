@@ -24,17 +24,7 @@ export default function Try() {
             <CardContainer className="inter-var" key={item?.id}>
         <CardBody
           className=" relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black   w-auto sm:w-[30rem] h-auto rounded-xl p-2   ">
-          {/* <CardItem
-          translateZ="50"
-          className="text-xl font-bold text-neutral-600 dark:text-white">
-          Make things float in air
-        </CardItem>
-        <CardItem
-          as="p"
-          translateZ="60"
-          className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-          Hover over this card to unleash the power of CSS perspective
-        </CardItem> */}
+         
           <CardItem translateZ="100" className="w-full ">
             <img
               src={item?.img1}

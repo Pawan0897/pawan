@@ -52,6 +52,7 @@
     "react-paginate": "^8.3.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.5",
+    "react-scroll": "^1.9.3",
     "redux": "^5.0.1",
     "redux-persist": "^6.0.0",
     "sweetalert2": "^11.15.10",

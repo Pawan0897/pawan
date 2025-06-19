@@ -1,24 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
+import Dropdown from "./Dropdown";
+import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
+  const navigate = useNavigate()
 
-
+   
   return (
     <>
-
       {/* ************************************************************************************ */}
       <Navbar expand="lg" className="navbar-expand-md bg-bodyNav">
         <Container>
-          <Navbar.Brand >
+          <Navbar.Brand>
             {" "}
             <Link className="navbar-brand" to="/">
               M<strong className="bgcolortext">y </strong>Jo
               <strong className="bgcolortext">ur</strong>ne
               <strong className="bgcolortext">y</strong>
-
             </Link>
           </Navbar.Brand>
           {/* *********************** */}
@@ -29,81 +29,96 @@ const Header = () => {
               <Nav.Link>
                 <Link
                   to="/"
-                  className={`nav-link bg-navtext ${location.pathname === "/" ? "navborder bgcolortext" : ""
-                    }`}
+                  className={`nav-link bg-navtext ${
+                    location.pathname === "/" ? "navborder bgcolortext" : ""
+                  }`}
                 >
                   Home
                 </Link>
               </Nav.Link>
-              {/* ****************************** */}
+              {/* ******************************  What i do */}
               <Nav.Link>
-                <Link
-                  to="/calender"
-                  className={`nav-link bg-navtext ${location.pathname === "/calender"
-                    ? "navborder bgcolortext"
-                    : ""
-                    }`}
+                <ScrollLink
+                  to="what-i-do"
+                  smooth={true}
+                  duration={1500}
+                  onClick={() => navigate("/?scrollTo=what-i-do")  }
+                  className={`nav-link  bg-navtext ${
+                    location.pathname === "/" ? "" : ""
+                  }`}
                 >
-                  TodoList
-                </Link>
+                  What-i-do
+                </ScrollLink>
               </Nav.Link>
-              {/* ****************************** */}
+              {/* ****************************** Skills */}
               <Nav.Link>
-                <Link
-                  to="/stripe"
-                  className={`nav-link bg-navtext ${location.pathname === "/stripe"
-                    ? "navborder bgcolortext"
-                    : ""
-                    }`}
+                <ScrollLink
+                  to="skill"
+                  smooth={true}
+                  onClick={() => navigate("/?scrollTo=skill")  }
+                  duration={1500}
+                  className={`nav-link  bg-navtext ${
+                    location.pathname === "/" ? "" : ""
+                  }`}
                 >
-                  Stripe
-                </Link>
+                  Skills
+                </ScrollLink>
+                
               </Nav.Link>
-              {/* ***************************** */}
-              <Nav.Link>
-                <Link
-                  to="/calculater"
-                  className={`nav-link bg-navtext ${location.pathname === "/calculater"
-                    ? "navborder bgcolortext"
-                    : ""
-                    }`}
-                >
-                  Calculator
-                </Link>
-              </Nav.Link>
-              {/* ****************************** */}
-              <Nav.Link>
-                <Link
-                  className={`${location.pathname == "/form" ? "navborder bgcolortext" : ""
-                    } nav-link bg-navtext`}
-                  // onClick={(e) => {
-                  //   e.preventDefault();
-                  //   if (location.pathname === "/") {
-                  //     window.scrollBy(2000, 2000);
-                  //   } else {
-                  //     navigate("/form");
-                  //   }
-                  // }}
-                  to="/form"
-                >
-                  Form
-                </Link>
-              </Nav.Link>
-              {/* ****************************** */}
-              <Nav.Link>
-                <Link
-                  to="/contactus"
-                  className={`nav-link bg-navtext ${location.pathname === "/contactus"
-                    ? "navborder bgcolortext"
-                    : ""
-                    }`}
-                >
-                  Contact
-                </Link>
-              </Nav.Link>
-              {/* ****************************** */}
+              {/* ***************************** Projects */}
               <Nav.Link>
                 
+
+                <ScrollLink
+                  to="project"
+                  smooth={true}
+                  duration={1500}
+                   onClick={() => navigate("/?scrollTo=project")  }
+                  className={`nav-link  bg-navtext ${
+                    location.pathname === "/" ? "" : ""
+                  }`}
+                >
+                  Projects
+                </ScrollLink>
+              </Nav.Link>
+              {/* ****************************** Task */}
+
+              <Nav.Link>
+                <Link className={`nav-link font-medium`}>
+                  <Dropdown />
+                </Link>
+              </Nav.Link>
+
+              {/* ****************************** About me*/}
+              <Nav.Link>
+               
+                <ScrollLink
+                  to="about-me"
+                  smooth={true}
+                  duration={1500}
+                   onClick={() => navigate("/?scrollTo=about-me")  }
+                  className={`nav-link  bg-navtext ${
+                    location.pathname === "/" ? "" : ""
+                  }`}
+                >
+                  about me
+                </ScrollLink>
+              </Nav.Link>
+
+              {/* ****************************** Contact me */}
+
+              <Nav.Link>
+                <ScrollLink
+                  to="contact-me"
+                  smooth={true}
+                  duration={1500}
+                   onClick={() => navigate("/?scrollTo=contact-me")  }
+                  className={`nav-link  bg-navtext ${
+                    location.pathname === "/" ? "" : ""
+                  }`}
+                >
+                  Contact me
+                </ScrollLink>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

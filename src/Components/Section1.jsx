@@ -1,4 +1,4 @@
-import user from "../Images/port4.png";
+import user from "../Images/port5.png";
 import "../Style/cd-wordwrapper.css";
 // import "../JS/cdjs-wordwrapper.js";
 
@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Particles from "./Particles.jsx";
 import Aos from "aos";
+import { IoDocumentText } from "react-icons/io5";
 // ***********************************
 
 export default function Section1() {
@@ -16,6 +17,9 @@ export default function Section1() {
     Aos.init({ duration: 1500, once: false }),
     import("../JS/cdjs-wordwrapper.js")
   },[])
+  // ********************************
+
+
   return (
     <>
       <div
@@ -47,12 +51,12 @@ export default function Section1() {
           {/* ************************************** */}
           <div className="col-md-12 col-lg-4"  data-aos="fade-in">
             <div
-              className="user-image  "  
+              className="user-image p-5"  
              
               id="pk"
             >
 
-              <img src={user} width={"100%"} />
+              <img src={user} width={"100%"} style={{transform:"s"}}/>
             </div>
           </div>
           {/* ************************************** */}
@@ -164,13 +168,24 @@ export default function Section1() {
                           <MailOutlineIcon />
                         </Link>
                       </li>
-
+  {/* ************************** */}
                       <li>
                         <a
+                      
                           className="buttton"
                           href="https://www.linkedin.com/in/pawan-kumar-05533b242/"
                         >
                           <LinkedInIcon />
+                        </a>
+                      </li>
+                      {/* ************************** */}
+                        <li>
+                        <a
+                          className="buttton"
+                          onClick={() => window.open(`/PawanKumar_CV.pdf`,"_blank")}
+                          
+                        >
+                          <IoDocumentText />
                         </a>
                       </li>
                     </ul>
@@ -181,6 +196,7 @@ export default function Section1() {
           </div>
         </div>
       </div>
+     
     </>
   );
 }
