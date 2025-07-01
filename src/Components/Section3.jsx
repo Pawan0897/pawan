@@ -304,9 +304,9 @@ function  Section3() {
                 {/* *******************************8 */}
                 <div className="col-md-12 col-lg-6 border-edit ps-5 mb-4 pe-0" data-aos="fade-up">
                   <div className="detail-first  p-4">
-                    <h2>MERN Stack Training – ToXSL Technologies (6 Months)</h2>
+                    <h2>MERN Stack Internship – ToXSL Technologies (6 Months)</h2>
                     <p>
-                      Completed 6 months of intensive MERN stack training,
+                      Completed 6 months of intensive MERN stack Internship,
                       gaining hands-on experience in full-stack development. Key
                       learnings and projects:
                     </p>

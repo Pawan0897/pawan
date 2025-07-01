@@ -77,7 +77,7 @@ export default function Index() {
             <div id="project">
               <Section7 />
             </div>
-            {/* ************* */}
+            {/* *************What Inspire ME */}
             <hr className="mt-5 mb-5 "></hr>
             <div id="section4">
               <Section4 />

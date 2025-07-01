@@ -87,7 +87,7 @@ export default function Section1() {
 
               <p>
                 Dedicated web developer with 1 year of experience and 6 months
-                of specialized training in React.js and Node.js. Proficient in
+                of specialized Internship in React.js and Node.js. Proficient in
                 React.js, Node.js, MongoDB, HTML, CSS, JavaScript, Bootstrap,
                 and PHP, with expertise in both front-end and back-end
                 development.
