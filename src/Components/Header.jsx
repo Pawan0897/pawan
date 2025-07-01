@@ -18,7 +18,7 @@ const Header = () => {
             <Link className="navbar-brand" to="/">
               M<strong className="bgcolortext">y </strong>Jo
               <strong className="bgcolortext">ur</strong>ne
-              <strong className="bgcolortext">y</strong>
+              <strong className="bgcolortext">y</strong>.
             </Link>
           </Navbar.Brand>
           {/* *********************** */}
